@@ -1,4 +1,7 @@
 # Recetario
+
+![Buscador tarjetas](/screenshots/app-icon-192.png)
+
 Gestiona tus recetas de cocina de forma centralizada. Marca los ingredientes, rellena los pasos con amplia posibilidad de edición enriquecida, guarda las fotos asociadas al plato que te gusten, aplica tags de localización, guarda tu valoración.
 
 Comparte el acceso con el resto de tu familia para que vean/editen las recetas, desplegando en Cloud Free de Oracle por ejemplo.
