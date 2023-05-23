@@ -44,6 +44,15 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_for_pages=>'2,3'
 );
 wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(13706764043576985)
+,p_list_item_display_sequence=>100
+,p_list_item_link_text=>'Ayuda imagenes'
+,p_list_item_link_target=>'f?p=&APP_ID.:11:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-info-circle-o'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'11'
+);
+wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(12642518993419175)
 ,p_list_item_display_sequence=>10000
 ,p_list_item_link_text=>'Administration'

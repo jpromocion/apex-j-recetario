@@ -17,6 +17,7 @@ wwv_flow_imp_page.create_page(
 ,p_alias=>'RECIPE-STEP'
 ,p_page_mode=>'MODAL'
 ,p_step_title=>'Pasos'
+,p_first_item=>'AUTO_FIRST_ITEM'
 ,p_autocomplete_on_off=>'OFF'
 ,p_step_template=>wwv_flow_imp.id(12393018067418215)
 ,p_page_template_options=>'#DEFAULT#:js-dialog-class-t-Drawer--pullOutEnd'
@@ -24,7 +25,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230518120407'
+,p_last_upd_yyyymmddhh24miss=>'20230523111232'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12758354803904638)
@@ -316,6 +317,42 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_DIALOG_CANCEL'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(13749511846755207)
+,p_name=>'Pasar siguiente elemento'
+,p_event_sequence=>20
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P9_DESCRIPTION'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'focusout'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13749690035755208)
+,p_event_id=>wwv_flow_imp.id(13749511846755207)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'Y'
+,p_name=>'Crear Pasar boton crear'
+,p_action=>'NATIVE_SET_FOCUS'
+,p_affected_elements_type=>'BUTTON'
+,p_affected_button_id=>wwv_flow_imp.id(12767667083904644)
+,p_client_condition_type=>'NULL'
+,p_client_condition_element=>'P9_ID'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13749736892755209)
+,p_event_id=>wwv_flow_imp.id(13749511846755207)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'Y'
+,p_name=>'Editar Pasar boton guardar'
+,p_action=>'NATIVE_SET_FOCUS'
+,p_affected_elements_type=>'BUTTON'
+,p_affected_button_id=>wwv_flow_imp.id(12767286571904644)
+,p_client_condition_type=>'NOT_NULL'
+,p_client_condition_element=>'P9_ID'
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12768433362904645)

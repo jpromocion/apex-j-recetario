@@ -9,6 +9,21 @@ prompt --install
 @@application/shared_components/files/icons_app_icon_32_png.sql
 @@application/shared_components/files/icons_app_icon_192_png.sql
 @@application/shared_components/files/icons_app_icon_512_png.sql
+@@application/shared_components/files/imagenes_cocina_amasar_rodillo_48_png.sql
+@@application/shared_components/files/imagenes_cocina_batidora_48_png.sql
+@@application/shared_components/files/imagenes_cocina_batidora_trituradora_48_png.sql
+@@application/shared_components/files/imagenes_cocina_batidora_varillas_48_png.sql
+@@application/shared_components/files/imagenes_cocina_bol_48_png.sql
+@@application/shared_components/files/imagenes_cocina_cazo_48_png.sql
+@@application/shared_components/files/imagenes_cocina_cazuela_48_png.sql
+@@application/shared_components/files/imagenes_cocina_cazuela_tapada_48_png.sql
+@@application/shared_components/files/imagenes_cocina_horno_48_png.sql
+@@application/shared_components/files/imagenes_cocina_microhondas_48_png.sql
+@@application/shared_components/files/imagenes_cocina_olla_express_48_png.sql
+@@application/shared_components/files/imagenes_cocina_sarten_48_png.sql
+@@application/shared_components/files/imagenes_cocina_sarten_tapada_48_png.sql
+@@application/shared_components/files/imagenes_cocina_varillas_mano_48_png.sql
+@@application/shared_components/files/icons_zapp_negro_jpeg.sql
 @@application/plugin_settings.sql
 @@application/shared_components/security/authorizations/administration_rights.sql
 @@application/shared_components/security/authorizations/reader_rights.sql
@@ -121,6 +136,7 @@ prompt --install
 @@application/pages/page_00008.sql
 @@application/pages/page_00009.sql
 @@application/pages/page_00010.sql
+@@application/pages/page_00011.sql
 @@application/pages/page_09999.sql
 @@application/pages/page_10000.sql
 @@application/pages/page_10010.sql
@@ -128,6 +144,7 @@ prompt --install
 @@application/pages/page_10012.sql
 @@application/pages/page_10013.sql
 @@application/pages/page_10014.sql
+@@application/pages/page_10020.sql
 @@application/deployment/definition.sql
 @@application/deployment/install/install_01_carga_tablas_sql.sql
 @@application/deployment/install/install_02_carga_triggers_sql.sql

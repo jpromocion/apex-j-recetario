@@ -17,6 +17,7 @@ wwv_flow_imp_page.create_page(
 ,p_alias=>'RECIPE-INGREDIENT'
 ,p_page_mode=>'MODAL'
 ,p_step_title=>'Ingredientes'
+,p_first_item=>'AUTO_FIRST_ITEM'
 ,p_autocomplete_on_off=>'OFF'
 ,p_step_template=>wwv_flow_imp.id(12393018067418215)
 ,p_page_template_options=>'#DEFAULT#:js-dialog-class-t-Drawer--pullOutEnd'
@@ -24,7 +25,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230519081727'
+,p_last_upd_yyyymmddhh24miss=>'20230523123456'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12736681433904277)
@@ -203,6 +204,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_plug_id=>wwv_flow_imp.id(12736681433904277)
 ,p_item_source_plug_id=>wwv_flow_imp.id(12736681433904277)
 ,p_prompt=>'Cantidad'
+,p_format_mask=>'FM999G999G999G999G990D90'
 ,p_source=>'AMOUNT'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_NUMBER_FIELD'
@@ -365,6 +367,42 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_DIALOG_CANCEL'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(13749235931755204)
+,p_name=>'Pasar siguiente elemento'
+,p_event_sequence=>20
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P8_IDMEASURE'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'focusout'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13749342152755205)
+,p_event_id=>wwv_flow_imp.id(13749235931755204)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'Y'
+,p_name=>'Crear - Pasar boton crear'
+,p_action=>'NATIVE_SET_FOCUS'
+,p_affected_elements_type=>'BUTTON'
+,p_affected_button_id=>wwv_flow_imp.id(12746652461904284)
+,p_client_condition_type=>'NULL'
+,p_client_condition_element=>'P8_ID'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13749426227755206)
+,p_event_id=>wwv_flow_imp.id(13749235931755204)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'Y'
+,p_name=>'Editar- Pasar boton guardar'
+,p_action=>'NATIVE_SET_FOCUS'
+,p_affected_elements_type=>'BUTTON'
+,p_affected_button_id=>wwv_flow_imp.id(12746250003904284)
+,p_client_condition_type=>'NOT_NULL'
+,p_client_condition_element=>'P8_ID'
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12747493612904284)

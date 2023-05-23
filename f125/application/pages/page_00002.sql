@@ -21,7 +21,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'18'
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230516115309'
+,p_last_upd_yyyymmddhh24miss=>'20230523123700'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12669274838574411)
@@ -80,10 +80,9 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_db_column_name=>'NAME'
 ,p_display_order=>2
 ,p_column_identifier=>'B'
-,p_column_label=>'Name'
+,p_column_label=>'Medida'
 ,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
-,p_tz_dependent=>'N'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(

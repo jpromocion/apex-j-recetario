@@ -23,6 +23,13 @@ wwv_flow_imp_shared.create_build_option(
 ,p_feature_identifier=>'APPLICATION_ACCESS_CONTROL'
 ,p_build_option_comment=>'Incorporate role based user authentication within your application and manage username mappings to application roles.'
 );
+wwv_flow_imp_shared.create_build_option(
+ p_id=>wwv_flow_imp.id(13809536174387321)
+,p_build_option_name=>'Feature: About Page'
+,p_build_option_status=>'INCLUDE'
+,p_feature_identifier=>'APPLICATION_ABOUT_PAGE'
+,p_build_option_comment=>'About this application page.'
+);
 wwv_flow_imp.component_end;
 end;
 /

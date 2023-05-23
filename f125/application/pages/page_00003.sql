@@ -17,6 +17,7 @@ wwv_flow_imp_page.create_page(
 ,p_alias=>'MEDIDA'
 ,p_page_mode=>'MODAL'
 ,p_step_title=>'Medida'
+,p_first_item=>'AUTO_FIRST_ITEM'
 ,p_autocomplete_on_off=>'OFF'
 ,p_step_template=>wwv_flow_imp.id(12393018067418215)
 ,p_page_template_options=>'#DEFAULT#:js-dialog-class-t-Drawer--pullOutEnd'
@@ -24,7 +25,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230516120051'
+,p_last_upd_yyyymmddhh24miss=>'20230523123835'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12659930629574395)
@@ -152,15 +153,13 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>20
 ,p_item_plug_id=>wwv_flow_imp.id(12659930629574395)
 ,p_item_source_plug_id=>wwv_flow_imp.id(12659930629574395)
-,p_use_cache_before_default=>'NO'
-,p_prompt=>'Name'
+,p_prompt=>'Nombre'
 ,p_source=>'NAME'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_TEXTAREA'
 ,p_cSize=>60
 ,p_cMaxlength=>500
 ,p_cHeight=>4
-,p_label_alignment=>'RIGHT'
 ,p_field_template=>wwv_flow_imp.id(12566612029418329)
 ,p_item_template_options=>'#DEFAULT#'
 ,p_is_persistent=>'N'
@@ -286,6 +285,42 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_DIALOG_CANCEL'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(13750588926755217)
+,p_name=>'Saltar boton'
+,p_event_sequence=>20
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P3_NAME'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'focusout'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13750699855755218)
+,p_event_id=>wwv_flow_imp.id(13750588926755217)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'Y'
+,p_name=>'Crear Saltar Crear'
+,p_action=>'NATIVE_SET_FOCUS'
+,p_affected_elements_type=>'BUTTON'
+,p_affected_button_id=>wwv_flow_imp.id(12667064839574409)
+,p_client_condition_type=>'NULL'
+,p_client_condition_element=>'P3_ID'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13750718711755219)
+,p_event_id=>wwv_flow_imp.id(13750588926755217)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'Y'
+,p_name=>'Editar Saltar Guardar'
+,p_action=>'NATIVE_SET_FOCUS'
+,p_affected_elements_type=>'BUTTON'
+,p_affected_button_id=>wwv_flow_imp.id(12666662266574409)
+,p_client_condition_type=>'NOT_NULL'
+,p_client_condition_element=>'P3_ID'
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12667886772574410)

@@ -17,6 +17,7 @@ wwv_flow_imp_page.create_page(
 ,p_alias=>'RECIPE'
 ,p_page_mode=>'MODAL'
 ,p_step_title=>'Receta (cabecera)'
+,p_first_item=>'AUTO_FIRST_ITEM'
 ,p_autocomplete_on_off=>'OFF'
 ,p_step_template=>wwv_flow_imp.id(12393018067418215)
 ,p_page_template_options=>'#DEFAULT#:js-dialog-class-t-Drawer--pullOutEnd'
@@ -24,7 +25,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230519092402'
+,p_last_upd_yyyymmddhh24miss=>'20230523110018'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12696137123903188)
@@ -426,6 +427,42 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_DIALOG_CANCEL'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(13748930197755201)
+,p_name=>'Navegar dejar campo'
+,p_event_sequence=>20
+,p_triggering_element_type=>'ITEM'
+,p_triggering_element=>'P7_TAGS'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'focusout'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13749021272755202)
+,p_event_id=>wwv_flow_imp.id(13748930197755201)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'Y'
+,p_name=>'Crear Foco Crear'
+,p_action=>'NATIVE_SET_FOCUS'
+,p_affected_elements_type=>'BUTTON'
+,p_affected_button_id=>wwv_flow_imp.id(12705481274903197)
+,p_client_condition_type=>'NULL'
+,p_client_condition_element=>'P7_ID'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13749121222755203)
+,p_event_id=>wwv_flow_imp.id(13748930197755201)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'Y'
+,p_name=>'Editar Foco Guardar'
+,p_action=>'NATIVE_SET_FOCUS'
+,p_affected_elements_type=>'BUTTON'
+,p_affected_button_id=>wwv_flow_imp.id(12705049922903196)
+,p_client_condition_type=>'NOT_NULL'
+,p_client_condition_element=>'P7_ID'
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12912268638261341)
