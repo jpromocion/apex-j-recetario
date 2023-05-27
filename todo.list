@@ -1,0 +1,22 @@
+
+      -SIGUIENTE VERSION V1.2:
+        -Junto a la version... poner algo mas del estilo "by jpromocion"
+        *--Otros ic0onos y modificar la pagina que los muestra:
+          *--frigorifico, congelador, salsera, plato, ...
+        -Mensaje al guardado:
+          *--desglosados en 3 en todas las paginas, pero resulta qyue ese no es el que se muestra, muestra el javascript que la pagina maestra tiene puesto a la vuelta de cerrar el dialogo!!!
+          -hacer que ese dialogo pueda devolver el mensaje concreto devuelve dialgo??
+          -que el mensaje de vuelta se cierre solo pasado unos segundos¿¿
+        -filtro peronsas: como un rango op un slider
+        -carrosule de fotos??
+        -MEter un 3 tipo de resultado en la busqueda: como el customers con logos, pero aqui que cogeria la primera foto metida de una receta
+        -filtros escondidos defecto en movil
+        -Filtro de deetalle maestro... alguna forma para que detecte cuando entres desde el buscador con una concreta, y lo colapse, o oculte toto el lado izquierdo de la pantalla!!!!
+          -QUiza crear un campo oculto estilo 1,0, que solo se rellena a 1 cuando se invoca desde el buscador
+          -Y entonces ver como ocultra todo el panel izquierdo, como hace el buscador con la vista tabla
+
+        -conversor ml a floz -> por mi peso -> crear una pantalla para converores en genral!!!
+        -Editor de receta maestro:
+          -Destacar mas grande el campo de nombre receta, en negrita tambnien
+        -añadir: dificulta a los campso de la recteta: con un combo de valores: muy facil, facil, medio, dificil, muy dificil
+
