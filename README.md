@@ -29,6 +29,7 @@ Es una exportación de la aplicación APEX tal cual en carpeta "f125":
 Instalar en una nueva instancia simplemente:
  * Importar aplicación, asignandole el id que queremos.
  * Si no se tienen los objetos de inicio marchar la opcion de instalar los "Supported Objects"
+ * Su esquema de login son las cuentas de APEX. Asigna al menos una cuenta con el rol "Administrator" para tener todas las opciones posibles.
 
 En "historico":
  * Esta mi backup de recetas.
