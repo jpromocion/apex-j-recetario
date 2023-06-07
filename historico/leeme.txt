@@ -1,0 +1,12 @@
+La carpeta con la fecha de la copia de seguridad YYYYMMDD.
+Importar con columna ID -> para asegurar fk correctas.
+Los archivos son txt con datos descargados en formato texto csv con el Data Workshop de APEX.
+  *Excepto "recipe_photo" que se exporta como XML -> debido a que csv no permite el archivo blob.
+
+Tablas necesarias a importar y orden:
+  -MEASURE -> measure.txt
+  -RECIPE -> recipe.txt
+  -RECIPE_INGREDIENT -> recipe_ingredient.txt
+  -RECIPE_STEP -> recipe_step.txt
+  -RECIPE_PHOTO -> recipe_photo.xml
+

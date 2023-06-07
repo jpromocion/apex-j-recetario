@@ -4,8 +4,8 @@ begin
 --     PAGE: 00004
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2022.10.07'
-,p_release=>'22.2.4'
+ p_version_yyyy_mm_dd=>'2023.04.28'
+,p_release=>'23.1.0'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -180,7 +180,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'13'
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230519095239'
+,p_last_upd_yyyymmddhh24miss=>'20230530111323'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12258510296434607)
@@ -189,7 +189,6 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_template=>wwv_flow_imp.id(12496653443418281)
 ,p_plug_display_sequence=>10
 ,p_plug_display_point=>'REGION_POSITION_01'
-,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 ,p_region_image=>'#APP_FILES#icons/app-icon-192.png'
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'HTML'
@@ -203,7 +202,6 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_template=>wwv_flow_imp.id(12428902632418246)
 ,p_plug_display_sequence=>10
 ,p_plug_display_point=>'SUB_REGIONS'
-,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'HTML'
 );
@@ -227,7 +225,8 @@ wwv_flow_imp_page.create_report_region(
 '      LISTAGG(RI.name, '', '') WITHIN GROUP (ORDER BY RI.ID)',
 '    FROM RECIPE_INGREDIENT RI',
 '    WHERE r.id = ri.idrecipe) card_subtext,',
-'  apex_util.prepare_url(''f?p=''||:APP_ID||'':6:''||:APP_SESSION||'':::6:P6_ID:''||r.id) card_link,',
+'  --apex_util.prepare_url(''f?p=''||:APP_ID||'':6:''||:APP_SESSION||'':::6:P6_ID:''||r.id) card_link,',
+'  apex_util.prepare_url(''f?p=''||:APP_ID||'':6:''||:APP_SESSION||'':::6:P6_ID,P6_MOSTRAR_PANEL_IZQUIERDA:''||r.id||'',N'') card_link,',
 '  upper(',
 '    decode(instr(r.name,'' ''),',
 '            0,',
@@ -412,7 +411,6 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_display_sequence=>10
 ,p_plug_display_point=>'REGION_POSITION_02'
 ,p_plug_query_num_rows=>15
-,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'HTML'
 ,p_attribute_03=>'Y'
@@ -435,6 +433,7 @@ wwv_flow_imp_page.create_page_plug(
 '    r.name,',
 '    r.personas,',
 '    r.time,',
+'    r.DIFFICULTY,',
 '    r.observation,',
 '    r.starrating,',
 '       (',
@@ -528,7 +527,6 @@ wwv_flow_imp_page.create_page_plug(
 'order by name'))
 ,p_plug_source_type=>'NATIVE_IR'
 ,p_ajax_items_to_submit=>'P4_DISPLAY_AS,P4_SEARCH,P4_PERSONAS,P4_INGREDIENTES_A_LOV,P4_INGREDIENTES_T_LOV,P4_TAGS_A_LOV,P4_TAGS_T_LOV,P4_VALORACION'
-,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 ,p_prn_content_disposition=>'ATTACHMENT'
 ,p_prn_units=>'MILLIMETERS'
 ,p_prn_paper_size=>'A4'
@@ -570,7 +568,7 @@ wwv_flow_imp_page.create_worksheet(
 ,p_show_detail_link=>'C'
 ,p_download_formats=>'CSV:HTML:XLSX:PDF'
 ,p_enable_mail_download=>'Y'
-,p_detail_link=>'f?p=&APP_ID.:6:&SESSION.::&DEBUG.::P6_ID:#ID#'
+,p_detail_link=>'f?p=&APP_ID.:6:&SESSION.::&DEBUG.::P6_ID,P6_MOSTRAR_PANEL_IZQUIERDA:#ID#,N'
 ,p_detail_link_text=>'<img src="#APEX_FILES#app_ui/img/icons/apex-edit-pencil.png" class="apex-edit-pencil" alt="">'
 ,p_owner=>'JORTRI'
 ,p_internal_uid=>12909840537261317
@@ -650,6 +648,16 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_identifier=>'H'
 ,p_column_label=>'Ingredientes'
 ,p_column_type=>'STRING'
+,p_use_as_row_header=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(13752152389755233)
+,p_db_column_name=>'DIFFICULTY'
+,p_display_order=>90
+,p_column_identifier=>'I'
+,p_column_label=>'Dificultad'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
@@ -803,7 +811,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_named_lov=>'TAGS'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'select lower(val) as d, lower(val) as r',
+'select lower(trim(val)) as d, lower(trim(val)) as r',
 'from',
 '  (',
 '  select',
@@ -819,7 +827,7 @@ wwv_flow_imp_page.create_page_item(
 '      )',
 '  where tags is not null',
 '  )  ',
-'group by lower(val);'))
+'group by lower(trim(val));'))
 ,p_cSize=>30
 ,p_field_template=>wwv_flow_imp.id(12565293941418328)
 ,p_item_template_options=>'#DEFAULT#'
@@ -842,7 +850,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_named_lov=>'TAGS'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'select lower(val) as d, lower(val) as r',
+'select lower(trim(val)) as d, lower(trim(val)) as r',
 'from',
 '  (',
 '  select',
@@ -858,7 +866,7 @@ wwv_flow_imp_page.create_page_item(
 '      )',
 '  where tags is not null',
 '  )  ',
-'group by lower(val);'))
+'group by lower(trim(val));'))
 ,p_cSize=>30
 ,p_field_template=>wwv_flow_imp.id(12565293941418328)
 ,p_item_template_options=>'#DEFAULT#'

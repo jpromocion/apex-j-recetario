@@ -4,8 +4,8 @@ begin
 --     PAGE: 00008
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2022.10.07'
-,p_release=>'22.2.4'
+ p_version_yyyy_mm_dd=>'2023.04.28'
+,p_release=>'23.1.0'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -25,7 +25,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230523123456'
+,p_last_upd_yyyymmddhh24miss=>'20230526120345'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12736681433904277)
@@ -40,7 +40,6 @@ wwv_flow_imp_page.create_page_plug(
 ,p_edit_operations=>'i:u:d'
 ,p_lost_update_check_type=>'VALUES'
 ,p_plug_source_type=>'NATIVE_FORM'
-,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(25163038568558106)
@@ -49,7 +48,6 @@ wwv_flow_imp_page.create_page_plug(
 ,p_region_template_options=>'#DEFAULT#:is-collapsed:t-Region--scrollBody'
 ,p_plug_template=>wwv_flow_imp.id(12487110258418274)
 ,p_plug_display_sequence=>90
-,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 ,p_plug_display_condition_type=>'ITEM_IS_NOT_NULL'
 ,p_plug_display_when_condition=>'P8_ID'
 ,p_attribute_01=>'N'
@@ -410,16 +408,54 @@ wwv_flow_imp_page.create_page_process(
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_region_id=>wwv_flow_imp.id(12736681433904277)
 ,p_process_type=>'NATIVE_FORM_DML'
-,p_process_name=>'Process form Recipe Ingredient'
+,p_process_name=>'Process form Recipe Ingredient - Guardar'
 ,p_attribute_01=>'REGION_SOURCE'
 ,p_attribute_05=>'Y'
 ,p_attribute_06=>'Y'
 ,p_attribute_08=>'Y'
+,p_process_error_message=>'Error al guardar: #SQLERRM_TEXT#'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(12746250003904284)
+,p_process_success_message=>'Ingrediente actualizado'
+,p_internal_uid=>12747493612904284
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13751690440755228)
+,p_process_sequence=>20
+,p_process_point=>'AFTER_SUBMIT'
+,p_region_id=>wwv_flow_imp.id(12736681433904277)
+,p_process_type=>'NATIVE_FORM_DML'
+,p_process_name=>'Process form Recipe Ingredient - Crear'
+,p_attribute_01=>'REGION_SOURCE'
+,p_attribute_05=>'Y'
+,p_attribute_06=>'Y'
+,p_attribute_08=>'Y'
+,p_process_error_message=>'Error al insertar: #SQLERRM_TEXT#'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(12746652461904284)
+,p_process_success_message=>'Ingrediente insertado'
+,p_internal_uid=>13751690440755228
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13751773645755229)
+,p_process_sequence=>30
+,p_process_point=>'AFTER_SUBMIT'
+,p_region_id=>wwv_flow_imp.id(12736681433904277)
+,p_process_type=>'NATIVE_FORM_DML'
+,p_process_name=>'Process form Recipe Ingredient - Eliminar'
+,p_attribute_01=>'REGION_SOURCE'
+,p_attribute_05=>'Y'
+,p_attribute_06=>'Y'
+,p_attribute_08=>'Y'
+,p_process_error_message=>'Error al eliminar: #SQLERRM_TEXT#'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(12745878062904283)
+,p_process_success_message=>'Ingrediente eliminado'
+,p_internal_uid=>13751773645755229
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12747879723904285)
-,p_process_sequence=>50
+,p_process_sequence=>40
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_CLOSE_WINDOW'
 ,p_process_name=>'Close Dialog'
@@ -427,6 +463,7 @@ wwv_flow_imp_page.create_page_process(
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_when=>'CREATE,SAVE,DELETE'
 ,p_process_when_type=>'REQUEST_IN_CONDITION'
+,p_internal_uid=>12747879723904285
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12747013447904284)
@@ -436,6 +473,7 @@ wwv_flow_imp_page.create_page_process(
 ,p_process_type=>'NATIVE_FORM_INIT'
 ,p_process_name=>'Initialize form Recipe Ingredient'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>12747013447904284
 );
 wwv_flow_imp.component_end;
 end;

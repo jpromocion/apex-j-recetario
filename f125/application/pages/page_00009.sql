@@ -4,8 +4,8 @@ begin
 --     PAGE: 00009
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2022.10.07'
-,p_release=>'22.2.4'
+ p_version_yyyy_mm_dd=>'2023.04.28'
+,p_release=>'23.1.0'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -25,7 +25,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230523111232'
+,p_last_upd_yyyymmddhh24miss=>'20230526113632'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12758354803904638)
@@ -40,7 +40,6 @@ wwv_flow_imp_page.create_page_plug(
 ,p_edit_operations=>'i:u:d'
 ,p_lost_update_check_type=>'VALUES'
 ,p_plug_source_type=>'NATIVE_FORM'
-,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12908392458261302)
@@ -49,7 +48,6 @@ wwv_flow_imp_page.create_page_plug(
 ,p_region_template_options=>'#DEFAULT#:is-collapsed:t-Region--scrollBody'
 ,p_plug_template=>wwv_flow_imp.id(12487110258418274)
 ,p_plug_display_sequence=>100
-,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 ,p_plug_display_condition_type=>'ITEM_IS_NOT_NULL'
 ,p_plug_display_when_condition=>'P9_ID'
 ,p_attribute_01=>'N'
@@ -211,6 +209,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_attribute_03=>'MULTILINE'
 ,p_attribute_04=>'400'
 ,p_attribute_07=>'Y'
+,p_attribute_25=>'CKEDITOR'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(12760729217904640)
@@ -360,16 +359,54 @@ wwv_flow_imp_page.create_page_process(
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_region_id=>wwv_flow_imp.id(12758354803904638)
 ,p_process_type=>'NATIVE_FORM_DML'
-,p_process_name=>'Process form Recipe Step'
+,p_process_name=>'Process form Recipe Step - Guardar'
 ,p_attribute_01=>'REGION_SOURCE'
 ,p_attribute_05=>'Y'
 ,p_attribute_06=>'Y'
 ,p_attribute_08=>'Y'
+,p_process_error_message=>'Error al guardar: #SQLERRM_TEXT#'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(12767286571904644)
+,p_process_success_message=>'Paso guardado correctamente'
+,p_internal_uid=>12768433362904645
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13751073445755222)
+,p_process_sequence=>20
+,p_process_point=>'AFTER_SUBMIT'
+,p_region_id=>wwv_flow_imp.id(12758354803904638)
+,p_process_type=>'NATIVE_FORM_DML'
+,p_process_name=>'Process form Recipe Step - Crear'
+,p_attribute_01=>'REGION_SOURCE'
+,p_attribute_05=>'Y'
+,p_attribute_06=>'Y'
+,p_attribute_08=>'Y'
+,p_process_error_message=>'Error al insertar: #SQLERRM_TEXT#'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(12767667083904644)
+,p_process_success_message=>'Nuevo paso insertado'
+,p_internal_uid=>13751073445755222
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13751154543755223)
+,p_process_sequence=>30
+,p_process_point=>'AFTER_SUBMIT'
+,p_region_id=>wwv_flow_imp.id(12758354803904638)
+,p_process_type=>'NATIVE_FORM_DML'
+,p_process_name=>'Process form Recipe Step - Eliminar'
+,p_attribute_01=>'REGION_SOURCE'
+,p_attribute_05=>'Y'
+,p_attribute_06=>'Y'
+,p_attribute_08=>'Y'
+,p_process_error_message=>'Error al eliminar: #SQLERRM_TEXT#'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(12766837633904644)
+,p_process_success_message=>'Paso eliminado'
+,p_internal_uid=>13751154543755223
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12768827036904645)
-,p_process_sequence=>50
+,p_process_sequence=>40
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_CLOSE_WINDOW'
 ,p_process_name=>'Close Dialog'
@@ -377,6 +414,7 @@ wwv_flow_imp_page.create_page_process(
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_when=>'CREATE,SAVE,DELETE'
 ,p_process_when_type=>'REQUEST_IN_CONDITION'
+,p_internal_uid=>12768827036904645
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12768016478904644)
@@ -386,6 +424,7 @@ wwv_flow_imp_page.create_page_process(
 ,p_process_type=>'NATIVE_FORM_INIT'
 ,p_process_name=>'Initialize form Recipe Step'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>12768016478904644
 );
 wwv_flow_imp.component_end;
 end;

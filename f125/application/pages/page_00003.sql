@@ -4,8 +4,8 @@ begin
 --     PAGE: 00003
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2022.10.07'
-,p_release=>'22.2.4'
+ p_version_yyyy_mm_dd=>'2023.04.28'
+,p_release=>'23.1.0'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -25,7 +25,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230523123835'
+,p_last_upd_yyyymmddhh24miss=>'20230526113956'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12659930629574395)
@@ -48,7 +48,6 @@ wwv_flow_imp_page.create_page_plug(
 ,p_region_template_options=>'#DEFAULT#:is-collapsed:t-Region--scrollBody'
 ,p_plug_template=>wwv_flow_imp.id(12487110258418274)
 ,p_plug_display_sequence=>70
-,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 ,p_plug_display_condition_type=>'ITEM_IS_NOT_NULL'
 ,p_plug_display_when_condition=>'P3_ID'
 ,p_attribute_01=>'N'
@@ -328,22 +327,61 @@ wwv_flow_imp_page.create_page_process(
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_region_id=>wwv_flow_imp.id(12659930629574395)
 ,p_process_type=>'NATIVE_FORM_DML'
-,p_process_name=>'Process form Medida'
+,p_process_name=>'Process form Medida - Guardar'
 ,p_attribute_01=>'REGION_SOURCE'
 ,p_attribute_05=>'Y'
 ,p_attribute_06=>'Y'
 ,p_attribute_08=>'Y'
+,p_process_error_message=>'Error al guardar: #SQLERRM_TEXT#'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(12666662266574409)
+,p_process_success_message=>'Medida guardada correctamente'
+,p_internal_uid=>12667886772574410
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13751430785755226)
+,p_process_sequence=>20
+,p_process_point=>'AFTER_SUBMIT'
+,p_region_id=>wwv_flow_imp.id(12659930629574395)
+,p_process_type=>'NATIVE_FORM_DML'
+,p_process_name=>'Process form Medida - Crear'
+,p_attribute_01=>'REGION_SOURCE'
+,p_attribute_05=>'Y'
+,p_attribute_06=>'Y'
+,p_attribute_08=>'Y'
+,p_process_error_message=>'Error al insertar: #SQLERRM_TEXT#'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(12667064839574409)
+,p_process_success_message=>'Nueva medida insertada'
+,p_internal_uid=>13751430785755226
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13751548813755227)
+,p_process_sequence=>30
+,p_process_point=>'AFTER_SUBMIT'
+,p_region_id=>wwv_flow_imp.id(12659930629574395)
+,p_process_type=>'NATIVE_FORM_DML'
+,p_process_name=>'Process form Medida - Eliminar'
+,p_attribute_01=>'REGION_SOURCE'
+,p_attribute_05=>'Y'
+,p_attribute_06=>'Y'
+,p_attribute_08=>'Y'
+,p_process_error_message=>'Error al eliminar: #SQLERRM_TEXT#'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(12666285704574408)
+,p_process_success_message=>'Medida eliminada'
+,p_internal_uid=>13751548813755227
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12668279336574410)
-,p_process_sequence=>50
+,p_process_sequence=>40
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_CLOSE_WINDOW'
 ,p_process_name=>'Close Dialog'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_when=>'CREATE,SAVE,DELETE'
 ,p_process_when_type=>'REQUEST_IN_CONDITION'
+,p_internal_uid=>12668279336574410
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12667448784574409)
@@ -353,6 +391,7 @@ wwv_flow_imp_page.create_page_process(
 ,p_process_type=>'NATIVE_FORM_INIT'
 ,p_process_name=>'Initialize form Medida'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>12667448784574409
 );
 wwv_flow_imp.component_end;
 end;

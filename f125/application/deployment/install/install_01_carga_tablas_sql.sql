@@ -4,8 +4,8 @@ begin
 --     INSTALL: INSTALL-01_carga_tablas.sql
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2022.10.07'
-,p_release=>'22.2.4'
+ p_version_yyyy_mm_dd=>'2023.04.28'
+,p_release=>'23.1.0'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -41,6 +41,7 @@ wwv_flow_imp_shared.create_install_script(
 '    observation varchar2(4000) null,',
 '    starrating number(2,0) null,',
 '    tags varchar2(4000) null,',
+'    difficulty varchar2(1) null,',
 '    created date not null,',
 '    created_by varchar2(255 char) not null,',
 '    updated date not null,',

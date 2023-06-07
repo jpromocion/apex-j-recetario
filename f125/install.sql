@@ -6,6 +6,8 @@ prompt --install
 @@application/shared_components/navigation/lists/navigation_menu.sql
 @@application/shared_components/navigation/lists/navigation_bar.sql
 @@application/shared_components/navigation/lists/access_control.sql
+@@application/shared_components/files/imagenes_cocina_paellera_48_png.sql
+@@application/shared_components/files/imagenes_cocina_vaporera_48_png.sql
 @@application/shared_components/files/icons_app_icon_32_png.sql
 @@application/shared_components/files/icons_app_icon_192_png.sql
 @@application/shared_components/files/icons_app_icon_512_png.sql
@@ -24,6 +26,14 @@ prompt --install
 @@application/shared_components/files/imagenes_cocina_sarten_tapada_48_png.sql
 @@application/shared_components/files/imagenes_cocina_varillas_mano_48_png.sql
 @@application/shared_components/files/icons_zapp_negro_jpeg.sql
+@@application/shared_components/files/imagenes_cocina_frigorifiico_48_png.sql
+@@application/shared_components/files/imagenes_cocina_congelador_48_png.sql
+@@application/shared_components/files/imagenes_cocina_mortero_48_png.sql
+@@application/shared_components/files/imagenes_cocina_salsera_48_png.sql
+@@application/shared_components/files/imagenes_cocina_plato_48_png.sql
+@@application/shared_components/files/imagenes_cocina_bandeja_horno_48_png.sql
+@@application/shared_components/files/imagenes_cocina_molde_48_png.sql
+@@application/shared_components/files/imagenes_cocina_escurridor_48_png.sql
 @@application/plugin_settings.sql
 @@application/shared_components/security/authorizations/administration_rights.sql
 @@application/shared_components/security/authorizations/reader_rights.sql
@@ -36,6 +46,7 @@ prompt --install
 @@application/shared_components/navigation/tabs/standard.sql
 @@application/shared_components/navigation/tabs/parent.sql
 @@application/shared_components/user_interface/lovs/access_roles.sql
+@@application/shared_components/user_interface/lovs/dificultad.sql
 @@application/shared_components/user_interface/lovs/email_username_format.sql
 @@application/shared_components/user_interface/lovs/ingredientes.sql
 @@application/shared_components/user_interface/lovs/medidas.sql

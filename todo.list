@@ -1,29 +1,9 @@
 
-      -SIGUIENTE VERSION V1.2:
-        *--Otros ic0onos y modificar la pagina que los muestra:
-          *--frigorifico, congelador, salsera, plato, ...
-
-        *---Filtro de deetalle maestro... alguna forma para que detecte cuando entres desde el buscador con una concreta, y lo colapse, o oculte toto el lado izquierdo de la pantalla!!!!
-          *---Campo oculto S/N -> defecto S
-          *---Javascrtipt al cargar pagina, como la pantalla buscadora para ocultar todo el panel de la izquierda, con la diferencia de que lo haga en base al valor del campo oculto
-          *---Desde el buscador, los enlaces al detalle de una receta concrta pasan valor al nuevo campo oculto con "N"
-          *---Boton gstionar no pasa valor al campo oculto -> por defecto es "S"
-
-        *--Editor de receta maestro:
-          *--Destacar mas grande el campo de nombre receta, en negrita tambnien
-
-        *--añadir: dificulta a los campso de la recteta: con un combo de valores: muy facil, facil, medio, dificil, muy dificil
-
-        *--pantalla login: castellano
-
-        *--buscadoir de medidas -> cabecera comun
-
-        -eliminar recta: se encargue de eliminar hijos
+      -SIGUIENTE VERSION V1.3:
 
         -Mensaje al guardado:
-          *--desglosados en 3 en todas las paginas, pero resulta qyue ese no es el que se muestra, muestra el javascript que la pagina maestra tiene puesto a la vuelta de cerrar el dialogo!!!
           -hacer que ese dialogo pueda devolver el mensaje concreto devuelve dialgo??
-          -que el mensaje de vuelta se cierre solo pasado unos segundos¿¿
+          -que el mensaje de vuelta se cierre solo pasado unos segundos
 
         -filtro peronsas: como un rango op un slider
 
@@ -40,5 +20,9 @@
         -miga superior del formulario -> ponerla en la global y que el texto se rellene en cada formulario
 
         -una exportacion a un pdf de una receta -> por si hubiera que sacarlas todas...
+
+        -recetas con videoos de referencia... o enlaces
+          -ahcer una partado de medios mas completo
+          -poder reproducir el video yutube dentro??
 
 

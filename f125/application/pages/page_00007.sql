@@ -4,8 +4,8 @@ begin
 --     PAGE: 00007
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2022.10.07'
-,p_release=>'22.2.4'
+ p_version_yyyy_mm_dd=>'2023.04.28'
+,p_release=>'23.1.0'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -25,7 +25,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230523110018'
+,p_last_upd_yyyymmddhh24miss=>'20230607164852'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12696137123903188)
@@ -40,7 +40,6 @@ wwv_flow_imp_page.create_page_plug(
 ,p_edit_operations=>'i:u:d'
 ,p_lost_update_check_type=>'VALUES'
 ,p_plug_source_type=>'NATIVE_FORM'
-,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12262340775434645)
@@ -48,8 +47,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_parent_plug_id=>wwv_flow_imp.id(12696137123903188)
 ,p_region_template_options=>'#DEFAULT#:is-collapsed:t-Region--scrollBody'
 ,p_plug_template=>wwv_flow_imp.id(12487110258418274)
-,p_plug_display_sequence=>90
-,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_plug_display_sequence=>100
 ,p_plug_display_condition_type=>'ITEM_IS_NOT_NULL'
 ,p_plug_display_when_condition=>'P7_ID'
 ,p_attribute_01=>'N'
@@ -338,7 +336,7 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(12909292727261311)
 ,p_name=>'P7_STARRATING'
 ,p_source_data_type=>'NUMBER'
-,p_item_sequence=>50
+,p_item_sequence=>60
 ,p_item_plug_id=>wwv_flow_imp.id(12696137123903188)
 ,p_item_source_plug_id=>wwv_flow_imp.id(12696137123903188)
 ,p_prompt=>unistr('Valoraci\00F3n')
@@ -371,7 +369,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_named_lov=>'TAGS'
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'select lower(val) as d, lower(val) as r',
+'select lower(trim(val)) as d, lower(trim(val)) as r',
 'from',
 '  (',
 '  select',
@@ -387,7 +385,7 @@ wwv_flow_imp_page.create_page_item(
 '      )',
 '  where tags is not null',
 '  )  ',
-'group by lower(val);'))
+'group by lower(trim(val));'))
 ,p_cSize=>30
 ,p_cMaxlength=>4000
 ,p_field_template=>wwv_flow_imp.id(12565313901418328)
@@ -401,6 +399,28 @@ wwv_flow_imp_page.create_page_item(
 ,p_attribute_05=>'Y'
 ,p_attribute_06=>'0'
 ,p_attribute_11=>':'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13751947288755231)
+,p_name=>'P7_DIFFICULTY'
+,p_source_data_type=>'VARCHAR2'
+,p_item_sequence=>50
+,p_item_plug_id=>wwv_flow_imp.id(12696137123903188)
+,p_item_source_plug_id=>wwv_flow_imp.id(12696137123903188)
+,p_prompt=>'Dificultad'
+,p_source=>'DIFFICULTY'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_named_lov=>'DIFICULTAD'
+,p_lov=>'.'||wwv_flow_imp.id(8332482041298339)||'.'
+,p_lov_display_null=>'YES'
+,p_cHeight=>1
+,p_field_template=>wwv_flow_imp.id(12565313901418328)
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_lov_display_extra=>'NO'
+,p_attribute_01=>'NONE'
+,p_attribute_02=>'N'
 );
 wwv_flow_imp_page.create_page_computation(
  p_id=>wwv_flow_imp.id(12912852448261347)
@@ -478,7 +498,8 @@ wwv_flow_imp_page.create_page_process(
 ,p_process_error_message=>'Error al guardar: #SQLERRM_TEXT#'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_when_button_id=>wwv_flow_imp.id(12705049922903196)
-,p_process_success_message=>'Cambios guardados correctamente'
+,p_process_success_message=>'Receta guardada correctamente'
+,p_internal_uid=>12912268638261341
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12912381152261342)
@@ -495,31 +516,28 @@ wwv_flow_imp_page.create_page_process(
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_when_button_id=>wwv_flow_imp.id(12705481274903197)
 ,p_process_success_message=>'Nueva receta insertada'
+,p_internal_uid=>12912381152261342
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(12912417574261343)
+ p_id=>wwv_flow_imp.id(13752487494755236)
 ,p_process_sequence=>40
 ,p_process_point=>'AFTER_SUBMIT'
-,p_region_id=>wwv_flow_imp.id(12696137123903188)
-,p_process_type=>'NATIVE_FORM_DML'
-,p_process_name=>'Process form Recipe - Eliminar'
-,p_attribute_01=>'REGION_SOURCE'
-,p_attribute_05=>'Y'
-,p_attribute_06=>'Y'
-,p_attribute_08=>'Y'
-,p_process_error_message=>'Error al eliminar: #SQLERRM_TEXT#'
+,p_process_type=>'NATIVE_EXECUTION_CHAIN'
+,p_process_name=>'Eliminacion'
+,p_attribute_01=>'N'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_when_button_id=>wwv_flow_imp.id(12704604265903196)
-,p_process_success_message=>'Receta eliminada'
+,p_internal_uid=>13752487494755236
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12706681773903198)
-,p_process_sequence=>50
+,p_process_sequence=>70
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_CLOSE_WINDOW'
 ,p_process_name=>'Close Dialog'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_process_when_button_id=>wwv_flow_imp.id(12705049922903196)
+,p_internal_uid=>12706681773903198
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12705890269903197)
@@ -529,6 +547,41 @@ wwv_flow_imp_page.create_page_process(
 ,p_process_type=>'NATIVE_FORM_INIT'
 ,p_process_name=>'Initialize form Recipe'
 ,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>12705890269903197
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13752315860755235)
+,p_process_sequence=>50
+,p_parent_process_id=>wwv_flow_imp.id(13752487494755236)
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Eliminar Hijos Receta'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'BEGIN',
+'    DELETE FROM RECIPE_PHOTO WHERE IDRECIPE = :P7_ID;',
+'',
+'    DELETE FROM RECIPE_STEP WHERE IDRECIPE = :P7_ID;',
+'',
+'    DELETE FROM RECIPE_INGREDIENT WHERE IDRECIPE = :P7_ID;',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_process_when_button_id=>wwv_flow_imp.id(12704604265903196)
+,p_internal_uid=>13752315860755235
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(12912417574261343)
+,p_process_sequence=>60
+,p_region_id=>wwv_flow_imp.id(12696137123903188)
+,p_parent_process_id=>wwv_flow_imp.id(13752487494755236)
+,p_process_type=>'NATIVE_FORM_DML'
+,p_process_name=>'Process form Recipe - Eliminar'
+,p_attribute_01=>'REGION_SOURCE'
+,p_attribute_05=>'Y'
+,p_attribute_06=>'Y'
+,p_attribute_08=>'Y'
+,p_process_error_message=>'Error al eliminar: #SQLERRM_TEXT#'
+,p_process_when_button_id=>wwv_flow_imp.id(12704604265903196)
+,p_process_success_message=>'Receta eliminada'
+,p_internal_uid=>12912417574261343
 );
 wwv_flow_imp.component_end;
 end;
