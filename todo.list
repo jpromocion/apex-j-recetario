@@ -5,9 +5,14 @@
           -hacer que ese dialogo pueda devolver el mensaje concreto devuelve dialgo??
           -que el mensaje de vuelta se cierre solo pasado unos segundos
 
+          https://forums.oracle.com/ords/apexds/post/fade-out-success-message-solved-3170
+          https://www.youtube.com/watch?v=TK32HcRugzs
+
         -filtro peronsas: como un rango op un slider
 
         -carrosule de fotos??
+          https://oracle-max.com/carrusel-de-imagenes-dinamico-en-oracle-apex/
+          https://oracle-max.com/como-hacer-un-api-restful-en-oracle-apex-que-nos-devuelva-una-imagen-en-su-request/
 
         -Buscador: formato cards -> muestra la primera foto de la receta como imagen del card
 
