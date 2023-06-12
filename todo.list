@@ -1,12 +1,8 @@
 
       -SIGUIENTE VERSION V1.3:
 
-        -Mensaje al guardado:
-          -hacer que ese dialogo pueda devolver el mensaje concreto devuelve dialgo??
-          -que el mensaje de vuelta se cierre solo pasado unos segundos
-
-          https://forums.oracle.com/ords/apexds/post/fade-out-success-message-solved-3170
-          https://www.youtube.com/watch?v=TK32HcRugzs
+        --Mensaje al guardado:
+          --que el mensaje de vuelta se cierre solo pasado unos segundos
 
         -filtro peronsas: como un rango op un slider
 
@@ -21,8 +17,6 @@
         -nuevo filtro en buscador: dificultad
 
         -globalizar pudiendo cambiar a ingles
-
-        -miga superior del formulario -> ponerla en la global y que el texto se rellene en cada formulario
 
         -una exportacion a un pdf de una receta -> por si hubiera que sacarlas todas...
 
