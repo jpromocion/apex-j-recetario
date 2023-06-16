@@ -12,6 +12,8 @@ Busqueda inteligente para dar rapidamente con la receta deseada.
 ¿La libreta de papel de toda la vida se ensucia mientras cocina y tienes que estar re-escribiendo las recetas?
 -> No te lo pienses más, cambiate a "Recetario".
 
+NOTA: Si requieres imprimir la receta, no se adopta ninguna herramienta de informe, básicamente porque desde el detalle de una receta concreta, con la opción imprimir y guardar como pdf del navegador... se puede imprimir con toda la información perfectamente.
+
 ## Requisitos
 
 Es una aplicación en Oracle APEX 22.2.4.
@@ -22,14 +24,17 @@ Incluye PWA: optimizado para ver en movil, incluye la posibilidad de instalarlo 
 
 ## Instalación
 
-Es una exportación de la aplicación APEX tal cual en carpeta "f125":
+Es una exportación de la aplicación APEX tal cual en carpeta "src/main/application":
  * Version descromida de la exportacion por zip ("Split into Multiple Files").
  * Incluye los Supported Objects para crearla desde inicio con los objetos de Base de datos necesarios.
 
 Instalar en una nueva instancia simplemente:
- * Importar aplicación, asignandole el id que queremos.
- * Si no se tienen los objetos de inicio marchar la opcion de instalar los "Supported Objects"
- * Su esquema de login son las cuentas de APEX. Asigna al menos una cuenta con el rol "Administrator" para tener todas las opciones posibles.
+ * Comprimir en zip "src/main/application".
+ * Importar aplicación en APEX con el zip generado, asignandole el id que queremos.
+ * Si no se tienen instalados los objetos de BBDD de inicio, marcar la opcion de instalar los "Supported Objects".
+ * Su esquema de login por defecto en la aplicación, son las cuentas de APEX. Asigna al menos una cuenta con el rol "Administrator" para tener todas las opciones posibles.
+
+El "src/main/database2 es simplemente para facilitar la manipulación del código, pero la aplicación incluye la instalación de los supported objects.
 
 En "historico":
  * Esta mi backup de recetas.
