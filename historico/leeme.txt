@@ -5,8 +5,10 @@ Los archivos son txt con datos descargados en formato texto csv con el Data Work
 
 Tablas necesarias a importar y orden:
   -MEASURE -> measure.txt
+  -CONVERTER -> converter.txt
   -RECIPE -> recipe.txt
   -RECIPE_INGREDIENT -> recipe_ingredient.txt
   -RECIPE_STEP -> recipe_step.txt
   -RECIPE_PHOTO -> recipe_photo.xml
+  -RECIPE_MEDIA -> recipe_media.txt
 

@@ -63,7 +63,7 @@ Id,IDRECIPE,STEP,DESCRIPTION,CREATED,CREATED_BY,UPDATED,UPDATED_BY
 	/\/\</code></pre><div class=""raw-html-embed""><figure>
  <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v21/imagenes_cocina/horno_48.png"" alt=""Horno"" title=""Horno"">
  <figcaption>Horno</figcaption>
-</figure></div><ul><li>Bandeja colocar mitades berenjena</li><li>Sazonar</li><li>Regar con aceite</li><li><span class=""text-big"">⇒</span> 200º - 20'&nbsp;</li></ul></div>",2023-05-23T16:38:08,JORTRI,2023-05-23T16:59:53,JORTRI
+</figure></div><ul><li>Bandeja colocar mitades berenjena</li><li>Sazonar</li><li>Regar con aceite</li></ul><p><span class=""text-big"">⇒</span> 200º - 20'&nbsp;</p></div>",2023-05-23T16:38:08,JORTRI,2023-06-09T11:09:54,JORTRI
 81,35,2,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
  <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v21/imagenes_cocina/cazuela_48.png"" alt=""Cacerola"" title=""Cacerola"">
  <figcaption>Cacerola</figcaption>
@@ -156,18 +156,18 @@ Id,IDRECIPE,STEP,DESCRIPTION,CREATED,CREATED_BY,UPDATED,UPDATED_BY
 73,32,3,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
  <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v21/imagenes_cocina/sarten_48.png"" alt=""Sartén"" title=""Sartén"">
  <figcaption>Sartén</figcaption>
-</figure></div><ul><li>Cebolla, pimiento rojo, pimiento verde, ajo: Picar daditos pequeños</li><li><span class=""text-big"">⇒</span> Pochar</li></ul></div>",2023-05-23T16:55:41,JORTRI,2023-05-23T16:55:41,JORTRI
+</figure></div><ul><li>Cebolla, pimiento rojo, pimiento verde, ajo: Picar daditos pequeños</li></ul><p><span class=""text-big"">⇒</span> Pochar</p></div>",2023-05-23T16:55:41,JORTRI,2023-06-09T11:09:42,JORTRI
 74,32,4,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
  <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v21/imagenes_cocina/sarten_48.png"" alt=""Sartén"" title=""Sartén"">
  <figcaption>Sartén</figcaption>
-</figure></div><p>paso 3 +:</p><ul><li>Carne picada</li><li>Sal/pimienta</li><li><span class=""text-big"">⇒</span> Mezclar y cocinar carne</li></ul><p style=""margin-left:40px;"">+</p><ul><li>Carne berenjena &nbsp;→ <mark class=""pen-red""><strong>!!Añadir toda (más adelante si hay demasiada carne, reservar congelar y hacer otro día con una pasta)!!</strong></mark></li><li>Perejil picado</li><li><span class=""text-big"">⇒</span> Mezclar</li></ul><p style=""margin-left:40px;"">+</p><ul><li>Vino blanco</li><li><span class=""text-big"">⇒</span> Reducir</li></ul></div>",2023-05-23T16:59:19,JORTRI,2023-05-23T16:59:19,JORTRI
+</figure></div><p>paso 3 +:</p><ul><li>Carne picada</li><li>Sal/pimienta</li></ul><p><span class=""text-big"">⇒</span> Mezclar y cocinar carne ⇒+:</p><ul><li>Carne berenjena &nbsp;→ <mark class=""pen-red""><strong>!!Añadir toda (más adelante si hay demasiada carne, reservar congelar y hacer otro día con una pasta)!!</strong></mark></li><li>Perejil picado</li></ul><p><span class=""text-big"">⇒</span> Mezclar ⇒+:</p><ul><li>Vino blanco</li></ul><p><span class=""text-big"">⇒</span> Reducir</p></div>",2023-05-23T16:59:19,JORTRI,2023-06-09T11:09:33,JORTRI
 75,32,5,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
  <img src=""https://cdn.pixabay.com/photo/2020/03/28/17/01/eggplant-4977808_960_720.png"" alt=""Berenjena"" title=""Berenejena"" width=""50px"" height=""50px"">
  <figcaption>Berenjena</figcaption>
 </figure></div><p>pieles del paso 1:</p><ul><li>Rellenar con mezcla del paso 4</li></ul><blockquote><p><mark class=""marker-yellow"">Aquí es donde si sobra mezcla la congelaremos para hacer en una pasta</mark></p></blockquote><ul><li>Queso rallado por encima</li></ul><div class=""raw-html-embed""><figure>
  <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v21/imagenes_cocina/horno_48.png"" alt=""Horno"" title=""Horno"">
  <figcaption>Horno</figcaption>
-</figure></div><ul><li><span class=""text-big"">⇒</span> Gratinar</li></ul></div>",2023-05-23T17:01:13,JORTRI,2023-05-23T17:01:35,JORTRI
+</figure></div><p><span class=""text-big"">⇒</span> Gratinar</p></div>",2023-05-23T17:01:13,JORTRI,2023-06-09T11:10:15,JORTRI
 76,33,1,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
  <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v21/imagenes_cocina/horno_48.png"" alt=""Horno"" title=""Horno"">
  <figcaption>Horno</figcaption>
@@ -1991,9 +1991,25 @@ Cacerola
  <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/cazuela_48.png"" alt=""Cacerola"" title=""Cacerola"">
  <figcaption>Cacerola grande</figcaption>
 </figure></div><ul><li>Aceite</li><li>Ajo laminas</li></ul><p>⇒ Ir dándole ⇒ +:</p><ul><li>Conejo</li><li>Sal / Pimienta</li></ul><p>⇒ Dorar ⇒ Reservar solo el conejo ⇒ +:</p><ul><li>Cebolla juliana</li></ul><p>⇒ Pochar 10' ⇒ +:</p><ul><li>Champiñones a laminas</li><li>Sal</li></ul><p>⇒ Ir dándole ⇒ +:</p><ul><li>Vino blanco</li></ul><p>⇒ Reducir vino hirviendo 5' ⇒ +:</p><ul><li>Conejo reservado antes</li><li>Castañas peladas</li><li>Caldo verduras</li><li>Tomillo</li><li>Romero</li></ul><p>⇒ Hervir ⇒ Bajar fuego ⇒ Cazo tapado ⇒ 40'</p><blockquote><p>A los 20' asegurar dar vuelta a la carne, y si falta liquido + caldo</p></blockquote><p>⇒ Reposar 10' antes servir</p><p>&nbsp;</p></div>",2023-06-07T15:05:44,JORTRI,2023-06-07T15:05:44,JORTRI
+564,202,1,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
+ <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/sarten_48.png"" alt=""Sartén"" title=""Sartén"">
+ <figcaption>Sartén</figcaption>
+</figure></div><ul><li>Bacon a tiras (Sin aceite ni nada)</li></ul><p>⇒ Ligeramente dorado ⇒ Reservar</p></div>",2023-06-25T10:23:29,JORTRI,2023-06-25T10:23:29,JORTRI
+566,202,3,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
+ <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/cazuela_48.png"" alt=""Cacerola"" title=""Cacerola"">
+ <figcaption>Cacerola</figcaption>
+</figure></div><ul><li>Agua y sal hirviendo</li><li>Macarrones</li></ul><p>⇒ Cocer - 10'</p></div>",2023-06-25T10:32:17,JORTRI,2023-06-25T10:33:01,JORTRI
 550,163,1,"<p>Pelar los dientes de ajo y la cebolla.</p><p>Despues la picamos y la ponemos a pochar a fuego medio en una cazuela con un buen chorro de aceite y los dientes enteros de ajo.</p><p>Pochamos durante unos 4 minutos, removiendo de vez en cuando.</p>",2023-06-07T15:17:44,JORTRI,2023-06-07T15:17:44,JORTRI
 552,163,3,"<p>Añadimos una cucharadita de pimentón dulce y removemos para que se integre bien.</p><p>Ahora incorporamos las patatas, el agua y una pizca de sal.</p><p>Removemos y dejamos unos 30 minutos (ir comprobando la patata) a fuego medio-bajo.</p>",2023-06-07T15:19:34,JORTRI,2023-06-07T15:19:34,JORTRI
 553,163,4,<p>Añadimos las alubias previamente lavadas y cocinamos 15 minutos más aproximadamente o hasta que la patata esté bien cocinada.</p>,2023-06-07T15:20:04,JORTRI,2023-06-07T15:20:04,JORTRI
+561,201,1,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
+ <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/bol_48.png"" alt=""Bol"" title=""Bol"">
+ <figcaption>Bol</figcaption>
+</figure></div><ul><li>Harina</li></ul><p>⇒ Con otro bol más pequeño → Le hacemos un huevo en el centro ⇒ +:</p><ul><li>Huevos cascados aparte (para evitar cascaras sueltas, estropear harina) y con pizca sal ⇒ <mark class=""marker-yellow"">Y batidos ya!!</mark></li></ul><p>⇒ Con el tenedor en circulos de dentro hacia fuera vamos integrando harina con huevo</p><blockquote><p>Cuando con el tenedor ya no se pueda… con cuchara o pala se sigue</p></blockquote><p>⇒ Seguimos en poyete y a mano</p><blockquote><p>Completa el proceso en unos 3'30''</p></blockquote><p>⇒ Bola de masa ⇒ Papel film cubierta ⇒ Reposar 10' temperatura ambiente</p></div>",2023-06-25T10:08:53,JORTRI,2023-06-25T10:08:53,JORTRI
+565,202,2,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
+ <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/cazuela_48.png"" alt=""Cacerola"" title=""Cacerola"">
+ <figcaption>Cacerola</figcaption>
+</figure></div><ul><li>Mantequilla</li></ul><p>⇒ Derretir hasta que este liquida - Fuego suave ⇒ +:</p><ul><li>Harina</li></ul><p>⇒ Mezclar sin parar con varillas<img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/varillas_mano_48.png"" alt=""Varillas mano""> ⇒ Hasta mezcla homogenea sin grumos 3'⇒ +:</p><ul><li>Medio vaso de leche</li></ul><p>⇒ Mezclar sin parar con varillas hasta que empiece a espesar ⇒ +:</p><ul><li>Medio vaso de leche</li></ul><p>⇒ Mezclar sin parar con varillas hasta que empiece a espesar &nbsp;de nuevo ⇒ +:</p><ul><li>Resto de leche</li></ul><p>⇒ Mezclar sin parar con varillas hasta que empiece a espesar &nbsp;de nuevo</p><blockquote><p>Siempre fuego suave, y sin parar de remover con las varillas.</p><p>Puede tardar unos 10' en espesar.</p></blockquote><p>+:</p><ul><li>Sal/Pimienta</li><li>Oregano</li><li>2 lochas del queso fundir</li><li>2 cucharadas mostaza dijon</li></ul><p>⇒ Mezclar ⇒ Textura cremosa pero no demasiada tirando a un poco liquida ⇒ Apartar</p><blockquote><p>Textura un poco liquida ayudará a integrarse luego con los macarrones.</p><p>Se puede añadir un poco de leche en este momento para conseguir esa textura un poco más liquida.</p></blockquote></div>",2023-06-25T10:31:53,JORTRI,2023-06-25T10:31:53,JORTRI
 544,160,3,"<div class=""ck-content""><p><strong><u>HUEVO POCHÉ / ESCALFADO</u></strong></p><div class=""raw-html-embed""><figure>
  <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/cazuela_48.png"" alt=""Cacerola"" title=""Cacerola"">
  <figcaption>Cacerola</figcaption>
@@ -2013,6 +2029,14 @@ Cacerola
 </figure></div><ul><li>Huevos</li><li>350 ml nata</li><li>Queso crema</li><li>Azucar</li><li>Contenido cazo paso 2</li></ul><p>⇒ Batidora hasta todo liquido <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31//imagenes_cocina/batidora_48.png"" alt=""Batidora""></p></div>",2023-06-07T15:30:20,JORTRI,2023-06-07T15:30:20,JORTRI
 545,160,4,<p>Tostar mitades de pan brioche untado con mantequilla:</p><ul><li>Base: salmon ahumado</li><li>Huevo escalfado</li><li>Salsa holandesa regando por encima</li></ul>,2023-06-07T14:58:16,JORTRI,2023-06-07T14:58:16,JORTRI
 548,162,1,<p>Carne:</p><ul><li>Salpimentar</li><li>Harinar</li></ul><p>⇒ Reservar</p>,2023-06-07T15:08:54,JORTRI,2023-06-07T15:09:46,JORTRI
+562,201,2,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
+ <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/amasar_rodillo_48.png"" alt=""Amasar rodillo"" title=""Amasar rodillo"">
+ <figcaption>Amasar rodillo</figcaption>
+</figure></div><ul><li>La masa tras reposar</li></ul><blockquote><p>Cuando se quiera ir pegando → un poco harina.</p><p>Redoblar sobre ella y volver a estirar.</p><p>Hasta que se trasluzca un poco pero no demasiado. Fino, pero no extremadamente fino.</p></blockquote><p>⇒ Cortar al gusto: espagueti, tagliatelle, para raviolis rellenos….</p><blockquote><p>Dejar en recipiente con un harina de base para que no se pegue → 10' de reposo</p></blockquote></div>",2023-06-25T10:14:09,JORTRI,2023-06-25T10:16:30,JORTRI
+563,201,3,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
+ <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/cazuela_48.png"" alt=""Cacerola"" title=""Cacerola"">
+ <figcaption>Cacerola</figcaption>
+</figure></div><ul><li>Agua hirviendo</li><li>Pasta</li></ul><p>⇒ 2'</p><p>NOTA: SI quieres congelar para otro día</p><ol><li>En el recipiente enharinado → Frigo para que se pongan un poco más duros</li><li>A bolsa de congelar y al congelador</li><li>Para hacerse → recien salido del congelador a la olla con agua hirviendo → 4'</li></ol></div>",2023-06-25T10:14:55,JORTRI,2023-06-25T10:16:18,JORTRI
 554,164,1,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
  <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/bol_48.png"" alt=""Bol"" title=""Bol"">
  <figcaption>Bol</figcaption>
@@ -2027,3 +2051,10 @@ Cacerola
  <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/horno_48.png"" alt=""Horno"" title=""Horno"">
  <figcaption>Horno</figcaption>
 </figure></div><p>⇒ 180º - 60'</p><blockquote><p>Usar mejor rejilla con papel horno</p></blockquote><p>⇒ Dejar enfriar al aire 1 hora ⇒ depende:</p><ul><li>O desmontas y se puede consumir templada</li><li>O dejar enfriar del todo, y luego Frigorifico 24 horas. Desmontar tras las 24 horas.</li></ul></div>",2023-06-07T15:32:57,JORTRI,2023-06-07T15:32:57,JORTRI
+567,202,4,"<div class=""ck-content""><div class=""raw-html-embed""><figure>
+ <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/bandeja_horno_48.png"" alt=""Bandeja horno"" title=""Bandeja horno"">
+ <figcaption>Bandeja horno</figcaption>
+</figure></div><ul><li>Macarrones</li><li>Bacon</li><li>Tomate frito</li></ul><p>⇒ Mezclar todo</p><div class=""raw-html-embed""><figure>
+ <img src=""https://gdbbf7e48b23eea-apexcurso.adb.eu-madrid-1.oraclecloudapps.com/ords/r/curso/125/files/static/v31/imagenes_cocina/horno_48.png"" alt=""Horno"" title=""Horno"">
+ <figcaption>Horno</figcaption>
+</figure></div><p>⇒ 200º - 10' ⇒ +:</p><ul><li>Hechar la bechamel y mezclar todo</li><li>Queso rallado por encima</li></ul><p>⇒ &nbsp;200º - 10' &nbsp;(Queso empieza a dorarse)</p><p>&nbsp;</p></div>",2023-06-25T10:35:42,JORTRI,2023-06-25T10:35:42,JORTRI
