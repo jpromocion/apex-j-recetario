@@ -52,8 +52,10 @@ prompt --install
 @@application/shared_components/user_interface/lovs/medidas.sql
 @@application/shared_components/user_interface/lovs/medidas_calcular_liquida.sql
 @@application/shared_components/user_interface/lovs/medidas_calcular_peso.sql
+@@application/shared_components/user_interface/lovs/recipe_name.sql
 @@application/shared_components/user_interface/lovs/tags.sql
 @@application/shared_components/user_interface/lovs/tipos_mostrar_resultados.sql
+@@application/shared_components/user_interface/lovs/tipo_media.sql
 @@application/shared_components/user_interface/lovs/tipo_medidas_calcular.sql
 @@application/pages/page_groups.sql
 @@application/comments.sql
@@ -151,10 +153,10 @@ prompt --install
 @@application/pages/page_00009.sql
 @@application/pages/page_00010.sql
 @@application/pages/page_00011.sql
+@@application/pages/page_00012.sql
 @@application/pages/page_00013.sql
 @@application/pages/page_00014.sql
 @@application/pages/page_00015.sql
-@@application/pages/page_00016.sql
 @@application/pages/page_09999.sql
 @@application/pages/page_10000.sql
 @@application/pages/page_10010.sql

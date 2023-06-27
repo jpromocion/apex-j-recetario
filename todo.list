@@ -1,5 +1,5 @@
 
-      -SIGUIENTE VERSION V1.4:
+      -SIGUIENTE VERSION v1.5:
 
         -filtro peronsas: como un rango op un slider
 
@@ -9,15 +9,7 @@
 
         -globalizar pudiendo cambiar a ingles
 
-        -recetas con videoos de referencia... o enlaces
-          -ahcer una partado de medios mas completo
-          -poder reproducir el video yutube dentro??
-
         -etiquetas de botones comunes: guardar, eliminar.... sacar a algo comun
-
-        -meter en algunos campos un texto de ayuda
-          -https://blog.cloudnueva.com/apex-dynamic-inline-help
-          -en nuestro caso es solo el texto, no hace falta que sea dinamic
 
         -probar depuraciones plsq, javascript:
           -https://www.youtube.com/watch?v=s47luWbGmdQ&t=33s
