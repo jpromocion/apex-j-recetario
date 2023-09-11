@@ -3,6 +3,7 @@ prompt --install
 @@application/delete_application.sql
 @@application/create_application.sql
 @@application/user_interfaces.sql
+@@workspace/credentials/google_sso.sql
 @@application/shared_components/navigation/lists/navigation_menu.sql
 @@application/shared_components/navigation/lists/navigation_bar.sql
 @@application/shared_components/navigation/lists/access_control.sql
@@ -141,6 +142,7 @@ prompt --install
 @@application/shared_components/globalization/messages.sql
 @@application/shared_components/globalization/dyntranslations.sql
 @@application/shared_components/security/authentications/oracle_apex_accounts.sql
+@@application/shared_components/security/authentications/google.sql
 @@application/shared_components/plugins/item_type/de_danielh_clockpicker.sql
 @@application/user_interfaces/combined_files.sql
 @@application/pages/page_00000.sql

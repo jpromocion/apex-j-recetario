@@ -32,7 +32,7 @@ Instalar en una nueva instancia simplemente:
  * Comprimir en zip "src/main/application".
  * Importar aplicación en APEX con el zip generado, asignandole el id que queremos.
  * Si no se tienen instalados los objetos de BBDD de inicio, marcar la opcion de instalar los "Supported Objects".
- * Su esquema de login por defecto en la aplicación, son las cuentas de APEX. Asigna al menos una cuenta con el rol "Administrator" para tener todas las opciones posibles.
+ * Su esquema de login por defecto en la aplicación es la conexión por OAuth con una cuenta de Google (aunque se deja como alternativa el de cuentas de APEX). Asigna al menos una cuenta con el rol "Administrator" para tener todas las opciones posibles. Con el conector por Google, los usuarios son las cuentas de email tal cual en mayúsculas: "ANONIMO@GMAIL.COM".
 
 El "src/main/database2 es simplemente para facilitar la manipulación del código, pero la aplicación incluye la instalación de los supported objects.
 
