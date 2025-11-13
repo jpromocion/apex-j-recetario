@@ -38,7 +38,7 @@ El "src/main/database2 es simplemente para facilitar la manipulación del códig
 
 En "historico":
  * Esta mi backup de recetas.
-
+> El historico es trasladado a mi repositorio privado.
 
 ## Capturas
 

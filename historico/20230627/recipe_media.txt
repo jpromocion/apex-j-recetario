@@ -1,9 +1,0 @@
-Id,IDRECIPE,TYPE,DESCRIPTION,URL,CREATED,CREATED_BY,UPDATED,UPDATED_BY
-7,202,U,Descripción de la receta,https://www.recetasdeescandalo.com/macarrones-de-escandalo-con-bechamel-de-mostaza-y-queso/,2023-06-27T08:17:29,JORTRI,2023-06-27T08:17:29,JORTRI
-11,144,V,Pelar un mango - 2,https://www.youtube.com/embed/lWYm-4euQSk,2023-06-27T08:20:53,JORTRI,2023-06-27T08:20:53,JORTRI
-5,159,V,Elaboración de la receta,https://www.youtube.com/embed/3h77zN0fnQE,2023-06-27T08:15:01,JORTRI,2023-06-27T08:15:01,JORTRI
-9,144,V,Video elaboración,https://www.youtube.com/embed/xtRzIVOZ4T8,2023-06-27T08:19:51,JORTRI,2023-06-27T08:19:51,JORTRI
-8,201,V,Video elaboración Fuego Loco,https://www.youtube.com/embed/lmu7whKmJ70,2023-06-27T08:18:51,JORTRI,2023-06-27T08:18:51,JORTRI
-10,144,V,Pelar un mango - 1,https://www.youtube.com/embed/wUPQJ5OdmEg,2023-06-27T08:20:24,JORTRI,2023-06-27T08:20:24,JORTRI
-4,104,V,Video como partir bogavante,https://www.youtube.com/embed/VdmakiXXeTQ,2023-06-27T08:06:55,JORTRI,2023-06-27T08:06:55,JORTRI
-6,160,V,Video elaboración,https://www.youtube.com/embed/r7eJ_BoiNhE,2023-06-27T08:16:14,JORTRI,2023-06-27T08:16:14,JORTRI
