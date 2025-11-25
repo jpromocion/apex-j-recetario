@@ -1,6 +1,7 @@
 # Recetario
 
 ![Buscador tarjetas](/screenshots/app-icon-192.png)
+![Oracle APEX](https://img.shields.io/badge/Oracle%20APEX-24%2B-orange)
 [![Dona PayPal](https://img.shields.io/badge/Dona-PayPal-blue.svg)](https://www.paypal.com/donate/?hosted_button_id=S2CX67ZD5C97C)
 
 Gestiona tus recetas de cocina de forma centralizada. Marca los ingredientes, rellena los pasos con amplia posibilidad de edición enriquecida, guarda las fotos asociadas al plato que te gusten, aplica tags de localización, guarda tu valoración.
