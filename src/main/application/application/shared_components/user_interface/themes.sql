@@ -1,11 +1,11 @@
 prompt --application/shared_components/user_interface/themes
 begin
 --   Manifest
---     THEME: 125
+--     THEME: 42
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2023.04.28'
-,p_release=>'23.1.2'
+ p_version_yyyy_mm_dd=>'2026.03.30'
+,p_release=>'26.1.5'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -14,50 +14,53 @@ wwv_flow_imp.component_begin (
 wwv_flow_imp_shared.create_theme(
  p_id=>wwv_flow_imp.id(12570831983418340)
 ,p_theme_id=>42
+,p_static_id=>'universal-theme'
 ,p_theme_name=>'Universal Theme'
 ,p_theme_internal_name=>'UNIVERSAL_THEME'
+,p_version_identifier=>'26.1'
 ,p_navigation_type=>'L'
 ,p_nav_bar_type=>'LIST'
-,p_reference_id=>4070917134413059350
 ,p_is_locked=>false
-,p_default_page_template=>wwv_flow_imp.id(12418865527418238)
-,p_default_dialog_template=>wwv_flow_imp.id(12413651154418235)
-,p_error_template=>wwv_flow_imp.id(12403673113418230)
-,p_printer_friendly_template=>wwv_flow_imp.id(12418865527418238)
-,p_breadcrumb_display_point=>'REGION_POSITION_01'
-,p_sidebar_display_point=>'REGION_POSITION_02'
-,p_login_template=>wwv_flow_imp.id(12403673113418230)
-,p_default_button_template=>wwv_flow_imp.id(12567825914418331)
-,p_default_region_template=>wwv_flow_imp.id(12461234257418262)
-,p_default_chart_template=>wwv_flow_imp.id(12461234257418262)
-,p_default_form_template=>wwv_flow_imp.id(12461234257418262)
-,p_default_reportr_template=>wwv_flow_imp.id(12461234257418262)
-,p_default_tabform_template=>wwv_flow_imp.id(12461234257418262)
-,p_default_wizard_template=>wwv_flow_imp.id(12461234257418262)
-,p_default_menur_template=>wwv_flow_imp.id(12473689497418268)
-,p_default_listr_template=>wwv_flow_imp.id(12461234257418262)
-,p_default_irr_template=>wwv_flow_imp.id(12453974867418259)
-,p_default_report_template=>wwv_flow_imp.id(12530491553418302)
-,p_default_label_template=>wwv_flow_imp.id(12565313901418328)
-,p_default_menu_template=>wwv_flow_imp.id(12569419779418332)
-,p_default_calendar_template=>wwv_flow_imp.id(12569544260418333)
-,p_default_list_template=>wwv_flow_imp.id(12555203477418320)
-,p_default_nav_list_template=>wwv_flow_imp.id(12564069317418326)
-,p_default_top_nav_list_temp=>wwv_flow_imp.id(12564069317418326)
-,p_default_side_nav_list_temp=>wwv_flow_imp.id(12562223844418325)
+,p_current_theme_style_id=>3294906487728305352
+,p_default_page_template=>4073832297226169690
+,p_default_dialog_template=>2101883943284197310
+,p_error_template=>2102634289808461002
+,p_printer_friendly_template=>4073832297226169690
+,p_login_template=>2102634289808461002
+,p_default_button_template=>4073839297780169708
+,p_default_region_template=>4073835273271169698
+,p_default_chart_template=>4073835273271169698
+,p_default_form_template=>4073835273271169698
+,p_default_reportr_template=>4073835273271169698
+,p_default_wizard_template=>4073835273271169698
+,p_default_menur_template=>2532939663579242476
+,p_default_listr_template=>4073835273271169698
+,p_default_irr_template=>2102002977963900996
+,p_default_report_template=>2540130677583398057
+,p_default_label_template=>1610598304472262251
+,p_default_menu_template=>4073839682315169711
+,p_default_list_template=>4073837480889169704
+,p_default_top_nav_list_temp=>2528231041045349458
+,p_default_side_nav_list_temp=>2469215554099805162
 ,p_default_nav_list_position=>'SIDE'
-,p_default_dialogbtnr_template=>wwv_flow_imp.id(12478892201418270)
-,p_default_dialogr_template=>wwv_flow_imp.id(12428902632418246)
-,p_default_option_label=>wwv_flow_imp.id(12565313901418328)
-,p_default_required_label=>wwv_flow_imp.id(12566612029418329)
-,p_default_navbar_list_template=>wwv_flow_imp.id(12561858633418324)
-,p_file_prefix => nvl(wwv_flow_application_install.get_static_theme_file_prefix(42),'#APEX_FILES#themes/theme_42/22.2/')
+,p_default_dialogbtnr_template=>2127905476394690047
+,p_default_dialogr_template=>4502917002193490937
+,p_default_option_label=>1610598304472262251
+,p_default_header_template=>2042159785845301134
+,p_default_footer_template=>2042159785845301134
+,p_default_required_label=>1610598484065263269
+,p_default_navbar_list_template=>2849019392706229583
+,p_file_prefix=>nvl(wwv_flow_application_install.get_static_theme_file_prefix(42),'#APEX_FILES#themes/theme_42/26.1/')
 ,p_files_version=>64
 ,p_icon_library=>'FONTAPEX'
 ,p_javascript_file_urls=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '#APEX_FILES#libraries/apex/#MIN_DIRECTORY#widget.stickyWidget#MIN#.js?v=#APEX_VERSION#',
 '#THEME_FILES#js/theme42#MIN#.js?v=#APEX_VERSION#'))
 ,p_css_file_urls=>'#THEME_FILES#css/Core#MIN#.css?v=#APEX_VERSION#'
+,p_reference_id=>wwv_imp_util.get_subscription_id(4073840274158169736,2000,'universal-theme',8842.261)
+,p_version_scn_master=>'SH256:WOPVC8vP1TPWUxczh2dJ4mCZcNGSTzA1cn8DjR2oQjY'
+,p_updated_on=>wwv_flow_imp.dz('20261014184035Z')
+,p_updated_by=>'JORTRI'
 );
 wwv_flow_imp.component_end;
 end;

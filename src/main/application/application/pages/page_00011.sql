@@ -4,8 +4,8 @@ begin
 --     PAGE: 00011
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2023.04.28'
-,p_release=>'23.1.2'
+ p_version_yyyy_mm_dd=>'2026.03.30'
+,p_release=>'26.1.5'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -17,19 +17,24 @@ wwv_flow_imp_page.create_page(
 ,p_alias=>'AYUDA-IMAGENES'
 ,p_step_title=>'Ayuda imagenes'
 ,p_autocomplete_on_off=>'OFF'
+,p_step_template=>4073832297226169690
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_page_component_map=>'17'
+,p_created_on=>wwv_flow_imp.dz('20230911121512Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20240217164050Z')
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230530113730'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(13109159796766003)
 ,p_plug_name=>unistr('Im\00E1genes aplicaci\00F3n')
+,p_static_id=>unistr('im\00E1genes-aplicaci\00F3n')
 ,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
-,p_plug_template=>wwv_flow_imp.id(12461234257418262)
+,p_plug_template=>4073835273271169698
 ,p_plug_display_sequence=>20
 ,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_item_display_point=>'ABOVE'
+,p_location=>null
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 unistr('La aplicaci\00F3n tiene una serie de im\00E1genes de utilidad com\00FAn para incluir al explicar los pasos de una receta. Las mismas'),
 unistr('est\00E1n dentro de <code>&P11_URLBASE.#APP_FILES#imagenes_cocina/</code>. <br />'),
@@ -602,33 +607,70 @@ unistr('        &nbsp;&lt;figcaption&gt;Sart\00E9n tapada&lt;/figcaption&gt;'),
 '',
 '',
 '',
+'  <tr>',
+'    <td>',
+'      <figure>',
+'        <img src="&P11_URLBASE.#APP_FILES#imagenes_cocina/robot_48.png" alt="Robot cocina"',
+'          title="Robot cocina">',
+'        <figcaption>Robot cocina</figcaption>',
+'      </figure>',
+'    </td>',
+'    <td>',
+'      <p style="font-family: monospace;">',
+'        &lt;figure&gt;',
+'        <br />',
+'        &nbsp;&lt;img src="&P11_URLBASE.#APP_FILES#imagenes_cocina/robot_48.png" alt="Robot cocina',
+'        title="Robot cocina"&gt;',
+'        <br />',
+'        &nbsp;&lt;figcaption&gt;Robot cocina&lt;/figcaption&gt;',
+'        <br />',
+'        &lt;/figure&gt;',
+'        <br />',
+'        &nbsp;',
+'      </p>',
+'    </td>',
+'  </tr>',
+'',
+'',
 '</table>'))
-,p_attribute_01=>'N'
-,p_attribute_02=>'HTML'
+,p_plug_query_headings_type=>'COLON_DELMITED_LIST'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML')).to_clob
+,p_updated_on=>wwv_flow_imp.dz('20240217164050Z')
+,p_updated_by=>'JORTRI'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(25965867656020381)
 ,p_plug_name=>unistr('Recetario (Ayuda im\00E1genes)')
+,p_static_id=>unistr('recetario-ayuda-im\00E1genes')
 ,p_region_template_options=>'#DEFAULT#'
-,p_plug_template=>wwv_flow_imp.id(12496653443418281)
+,p_escape_on_http_output=>'N'
+,p_plug_template=>2675494171183407654
 ,p_plug_display_sequence=>10
 ,p_plug_display_point=>'REGION_POSITION_01'
+,p_plug_item_display_point=>'ABOVE'
+,p_plug_query_headings_type=>'COLON_DELMITED_LIST'
 ,p_region_image=>'#APP_FILES#icons/app-icon-192.png'
-,p_attribute_01=>'N'
-,p_attribute_02=>'HTML'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(13109449238766006)
 ,p_name=>'P11_URLBASE'
 ,p_item_sequence=>10
 ,p_item_plug_id=>wwv_flow_imp.id(13109159796766003)
+,p_source_type=>'ALWAYS_NULL'
 ,p_display_as=>'NATIVE_HIDDEN'
-,p_attribute_01=>'Y'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'value_protected', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_computation(
  p_id=>wwv_flow_imp.id(13109516606766007)
 ,p_computation_sequence=>10
 ,p_computation_item=>'P11_URLBASE'
+,p_static_id=>'p11-urlbase'
 ,p_computation_point=>'BEFORE_BOX_BODY'
 ,p_computation_type=>'FUNCTION_BODY'
 ,p_computation_language=>'PLSQL'

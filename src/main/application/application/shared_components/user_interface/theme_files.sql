@@ -1,11 +1,11 @@
 prompt --application/shared_components/user_interface/theme_files
 begin
 --   Manifest
---     THEME FILES: 125
+--     THEME FILES: 42
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2023.04.28'
-,p_release=>'23.1.2'
+ p_version_yyyy_mm_dd=>'2026.03.30'
+,p_release=>'26.1.5'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0

@@ -4,8 +4,8 @@ begin
 --     PAGE: 00004
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2023.04.28'
-,p_release=>'23.1.2'
+ p_version_yyyy_mm_dd=>'2026.03.30'
+,p_release=>'26.1.5'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -175,41 +175,37 @@ wwv_flow_imp_page.create_page(
 '$reset.click(resetFilters);',
 '',
 'toggleRegionDisplay(false);'))
-,p_step_template=>wwv_flow_imp.id(12395935425418225)
+,p_step_template=>2528119710305719084
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_page_component_map=>'13'
+,p_created_on=>wwv_flow_imp.dz('20230911121511Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20261014184025Z')
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230616112548'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(12258510296434607)
-,p_plug_name=>'Recetas (buscador)'
-,p_region_template_options=>'#DEFAULT#'
-,p_plug_template=>wwv_flow_imp.id(12496653443418281)
+ p_id=>wwv_flow_imp.id(12684707128709731)
+,p_plug_name=>'Filtros'
+,p_static_id=>'filtros'
+,p_region_template_options=>'#DEFAULT#:is-expanded:t-Region--scrollBody'
+,p_escape_on_http_output=>'N'
+,p_plug_template=>2665811232373458102
 ,p_plug_display_sequence=>10
-,p_plug_display_point=>'REGION_POSITION_01'
-,p_region_image=>'#APP_FILES#icons/app-icon-192.png'
-,p_attribute_01=>'N'
-,p_attribute_02=>'HTML'
-);
-wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(12909566637261314)
-,p_plug_name=>'Tipos'
-,p_parent_plug_id=>wwv_flow_imp.id(12258510296434607)
-,p_region_css_classes=>'t-Form--search'
-,p_region_template_options=>'#DEFAULT#'
-,p_plug_template=>wwv_flow_imp.id(12428902632418246)
-,p_plug_display_sequence=>10
-,p_plug_display_point=>'SUB_REGIONS'
-,p_attribute_01=>'N'
-,p_attribute_02=>'HTML'
+,p_plug_display_point=>'REGION_POSITION_02'
+,p_plug_item_display_point=>'ABOVE'
+,p_plug_query_headings_type=>'COLON_DELMITED_LIST'
+,p_plug_query_num_rows=>15
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML',
+  'show_line_breaks', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_report_region(
  p_id=>wwv_flow_imp.id(12683891342709728)
 ,p_name=>'Recetas'
+,p_static_id=>'recetas'
 ,p_region_name=>'cards_region'
-,p_template=>wwv_flow_imp.id(12428902632418246)
+,p_template=>4502917002193490937
 ,p_display_sequence=>30
 ,p_region_template_options=>'#DEFAULT#'
 ,p_component_template_options=>'#DEFAULT#:u-colors:t-Cards--basic:t-Cards--displayInitials:t-Cards--3cols:t-Cards--desc-2ln:t-Cards--animColorFill'
@@ -330,8 +326,9 @@ wwv_flow_imp_page.create_report_region(
 'order by name'))
 ,p_ajax_enabled=>'Y'
 ,p_ajax_items_to_submit=>'P4_DISPLAY_AS,P4_SEARCH,P4_PERSONAS,P4_INGREDIENTES_A_LOV,P4_INGREDIENTES_T_LOV,P4_TAGS_A_LOV,P4_TAGS_T_LOV,P4_VALORACION'
+,p_fixed_header=>'PAGE'
 ,p_lazy_loading=>false
-,p_query_row_template=>wwv_flow_imp.id(12518836940418295)
+,p_query_row_template=>2976458789255810118
 ,p_query_num_rows=>50
 ,p_query_options=>'DERIVED_REPORT_COLUMNS'
 ,p_query_show_nulls_as=>' - '
@@ -344,42 +341,11 @@ wwv_flow_imp_page.create_report_region(
 ,p_plug_query_strip_html=>'N'
 );
 wwv_flow_imp_page.create_report_columns(
- p_id=>wwv_flow_imp.id(12262232288434644)
-,p_query_column_id=>1
-,p_column_alias=>'ID'
-,p_column_display_sequence=>60
-,p_column_heading=>'Id'
-,p_use_as_row_header=>'N'
-,p_derived_column=>'N'
-,p_include_in_export=>'Y'
-);
-wwv_flow_imp_page.create_report_columns(
- p_id=>wwv_flow_imp.id(12259728382434619)
-,p_query_column_id=>2
-,p_column_alias=>'CARD_TITLE'
-,p_column_display_sequence=>20
-,p_column_heading=>'Card Title'
-,p_use_as_row_header=>'N'
-,p_derived_column=>'N'
-,p_include_in_export=>'Y'
-);
-wwv_flow_imp_page.create_report_columns(
- p_id=>wwv_flow_imp.id(12259804117434620)
-,p_query_column_id=>3
-,p_column_alias=>'CARD_TEXT'
-,p_column_display_sequence=>30
-,p_column_heading=>'Card Text'
-,p_use_as_row_header=>'N'
-,p_derived_column=>'N'
-,p_include_in_export=>'Y'
-);
-wwv_flow_imp_page.create_report_columns(
- p_id=>wwv_flow_imp.id(12259984730434621)
-,p_query_column_id=>4
-,p_column_alias=>'CARD_SUBTEXT'
-,p_column_display_sequence=>40
-,p_column_heading=>'Card Subtext'
-,p_use_as_row_header=>'N'
+ p_id=>wwv_flow_imp.id(12260001484434622)
+,p_query_column_id=>6
+,p_column_alias=>'CARD_INITIALS'
+,p_column_display_sequence=>50
+,p_column_heading=>'Card Initials'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
@@ -389,43 +355,74 @@ wwv_flow_imp_page.create_report_columns(
 ,p_column_alias=>'CARD_LINK'
 ,p_column_display_sequence=>10
 ,p_column_heading=>'Card Link'
-,p_use_as_row_header=>'N'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
 wwv_flow_imp_page.create_report_columns(
- p_id=>wwv_flow_imp.id(12260001484434622)
-,p_query_column_id=>6
-,p_column_alias=>'CARD_INITIALS'
-,p_column_display_sequence=>50
-,p_column_heading=>'Card Initials'
-,p_use_as_row_header=>'N'
+ p_id=>wwv_flow_imp.id(12259984730434621)
+,p_query_column_id=>4
+,p_column_alias=>'CARD_SUBTEXT'
+,p_column_display_sequence=>40
+,p_column_heading=>'Card Subtext'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_imp_page.create_report_columns(
+ p_id=>wwv_flow_imp.id(12259804117434620)
+,p_query_column_id=>3
+,p_column_alias=>'CARD_TEXT'
+,p_column_display_sequence=>30
+,p_column_heading=>'Card Text'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_imp_page.create_report_columns(
+ p_id=>wwv_flow_imp.id(12259728382434619)
+,p_query_column_id=>2
+,p_column_alias=>'CARD_TITLE'
+,p_column_display_sequence=>20
+,p_column_heading=>'Card Title'
+,p_derived_column=>'N'
+,p_include_in_export=>'Y'
+);
+wwv_flow_imp_page.create_report_columns(
+ p_id=>wwv_flow_imp.id(12262232288434644)
+,p_query_column_id=>1
+,p_column_alias=>'ID'
+,p_column_display_sequence=>60
+,p_column_heading=>'Id'
 ,p_derived_column=>'N'
 ,p_include_in_export=>'Y'
 );
 wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(12684707128709731)
-,p_plug_name=>'Filtros'
-,p_region_template_options=>'#DEFAULT#:is-expanded:t-Region--scrollBody'
-,p_plug_template=>wwv_flow_imp.id(12487110258418274)
+ p_id=>wwv_flow_imp.id(12258510296434607)
+,p_plug_name=>'Recetas (buscador)'
+,p_static_id=>'recetas-buscador'
+,p_region_template_options=>'#DEFAULT#'
+,p_escape_on_http_output=>'N'
+,p_plug_template=>2675494171183407654
 ,p_plug_display_sequence=>10
-,p_plug_display_point=>'REGION_POSITION_02'
-,p_plug_query_num_rows=>15
-,p_attribute_01=>'N'
-,p_attribute_02=>'HTML'
-,p_attribute_03=>'Y'
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_plug_item_display_point=>'ABOVE'
+,p_plug_query_headings_type=>'COLON_DELMITED_LIST'
+,p_region_image=>'#APP_FILES#icons/app-icon-192.png'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12909729293261316)
 ,p_plug_name=>'Recetas tabla'
+,p_static_id=>'recetas-tabla'
 ,p_region_name=>'report_region'
 ,p_region_template_options=>'#DEFAULT#'
-,p_component_template_options=>'#DEFAULT#'
 ,p_region_attributes=>'style="display: none;"'
-,p_plug_template=>wwv_flow_imp.id(12453974867418259)
+,p_escape_on_http_output=>'N'
+,p_plug_template=>2102002977963900996
 ,p_plug_display_sequence=>40
 ,p_plug_new_grid_row=>false
 ,p_plug_new_grid_column=>false
+,p_plug_item_display_point=>'ABOVE'
 ,p_query_type=>'SQL'
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select ',
@@ -527,6 +524,7 @@ wwv_flow_imp_page.create_page_plug(
 'order by name'))
 ,p_plug_source_type=>'NATIVE_IR'
 ,p_ajax_items_to_submit=>'P4_DISPLAY_AS,P4_SEARCH,P4_PERSONAS,P4_INGREDIENTES_A_LOV,P4_INGREDIENTES_T_LOV,P4_TAGS_A_LOV,P4_TAGS_T_LOV,P4_VALORACION'
+,p_plug_query_headings_type=>'COLON_DELMITED_LIST'
 ,p_prn_content_disposition=>'ATTACHMENT'
 ,p_prn_units=>'MILLIMETERS'
 ,p_prn_paper_size=>'A4'
@@ -556,22 +554,52 @@ wwv_flow_imp_page.create_page_plug(
 ,p_prn_page_header_alignment=>'CENTER'
 ,p_prn_page_footer_alignment=>'CENTER'
 ,p_prn_border_color=>'#666666'
+,p_ai_enabled=>false
+,p_updated_on=>wwv_flow_imp.dz('20261014184018Z')
+,p_updated_by=>'JORTRI'
 );
 wwv_flow_imp_page.create_worksheet(
  p_id=>wwv_flow_imp.id(12909840537261317)
 ,p_max_row_count=>'1000000'
 ,p_no_data_found_message=>'No hay recetas!!!'
+,p_allow_save_rpt_public=>'Y'
 ,p_pagination_type=>'ROWS_X_TO_Y_OF_Z'
 ,p_pagination_display_pos=>'BOTTOM_RIGHT'
+,p_show_display_row_count=>'Y'
 ,p_report_list_mode=>'NONE'
 ,p_lazy_loading=>false
 ,p_show_detail_link=>'C'
+,p_show_rows_per_page=>'N'
+,p_show_notify=>'Y'
 ,p_download_formats=>'CSV:HTML:XLSX:PDF'
 ,p_enable_mail_download=>'Y'
 ,p_detail_link=>'f?p=&APP_ID.:6:&SESSION.::&DEBUG.::P6_ID,P6_MOSTRAR_PANEL_IZQUIERDA:#ID#,N'
 ,p_detail_link_text=>'<img src="#APEX_FILES#app_ui/img/icons/apex-edit-pencil.png" class="apex-edit-pencil" alt="">'
-,p_owner=>'JORTRI'
 ,p_internal_uid=>12909840537261317
+,p_updated_on=>wwv_flow_imp.dz('20261014184018Z')
+,p_updated_by=>'JORTRI'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(13752152389755233)
+,p_db_column_name=>'DIFFICULTY'
+,p_display_order=>90
+,p_column_identifier=>'I'
+,p_column_label=>'Dificultad'
+,p_column_type=>'STRING'
+,p_heading_alignment=>'LEFT'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(12910535982261324)
+,p_db_column_name=>'ESTRELLAS'
+,p_display_order=>60
+,p_column_identifier=>'G'
+,p_column_label=>unistr('Valoraci\00F3n')
+,p_column_type=>'STRING'
+,p_display_text_as=>'WITHOUT_MODIFICATION'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(12909921973261318)
@@ -581,6 +609,18 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_label=>'Id'
 ,p_column_type=>'NUMBER'
 ,p_display_text_as=>'HIDDEN_ESCAPE_SC'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(12910602707261325)
+,p_db_column_name=>'INGREDIENTES'
+,p_display_order=>80
+,p_column_identifier=>'H'
+,p_column_label=>'Ingredientes'
+,p_column_type=>'STRING'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(12910069789261319)
@@ -590,6 +630,17 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_label=>'Nombre'
 ,p_column_type=>'STRING'
 ,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(12910317558261322)
+,p_db_column_name=>'OBSERVATION'
+,p_display_order=>70
+,p_column_identifier=>'E'
+,p_column_label=>'Observaciones'
+,p_column_type=>'STRING'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(12910186421261320)
@@ -600,6 +651,17 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_type=>'NUMBER'
 ,p_column_alignment=>'RIGHT'
 ,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
+);
+wwv_flow_imp_page.create_worksheet_column(
+ p_id=>wwv_flow_imp.id(12910428869261323)
+,p_db_column_name=>'STARRATING'
+,p_display_order=>50
+,p_column_identifier=>'F'
+,p_column_label=>unistr('Valoraci\00F3n (n\00FAmerica)')
+,p_column_type=>'NUMBER'
+,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(12910240621261321)
@@ -611,53 +673,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_column_alignment=>'CENTER'
 ,p_tz_dependent=>'N'
 ,p_use_as_row_header=>'N'
-);
-wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(12910428869261323)
-,p_db_column_name=>'STARRATING'
-,p_display_order=>50
-,p_column_identifier=>'F'
-,p_column_label=>unistr('Valoraci\00F3n (n\00FAmerica)')
-,p_column_type=>'NUMBER'
-,p_use_as_row_header=>'N'
-);
-wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(12910535982261324)
-,p_db_column_name=>'ESTRELLAS'
-,p_display_order=>60
-,p_column_identifier=>'G'
-,p_column_label=>unistr('Valoraci\00F3n')
-,p_column_type=>'STRING'
-,p_display_text_as=>'WITHOUT_MODIFICATION'
-,p_use_as_row_header=>'N'
-);
-wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(12910317558261322)
-,p_db_column_name=>'OBSERVATION'
-,p_display_order=>70
-,p_column_identifier=>'E'
-,p_column_label=>'Observaciones'
-,p_column_type=>'STRING'
-,p_use_as_row_header=>'N'
-);
-wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(12910602707261325)
-,p_db_column_name=>'INGREDIENTES'
-,p_display_order=>80
-,p_column_identifier=>'H'
-,p_column_label=>'Ingredientes'
-,p_column_type=>'STRING'
-,p_use_as_row_header=>'N'
-);
-wwv_flow_imp_page.create_worksheet_column(
- p_id=>wwv_flow_imp.id(13752152389755233)
-,p_db_column_name=>'DIFFICULTY'
-,p_display_order=>90
-,p_column_identifier=>'I'
-,p_column_label=>'Dificultad'
-,p_column_type=>'STRING'
-,p_heading_alignment=>'LEFT'
-,p_use_as_row_header=>'N'
+,p_available_clientside=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
  p_id=>wwv_flow_imp.id(12989046432065463)
@@ -667,15 +683,37 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ,p_status=>'PUBLIC'
 ,p_is_default=>'Y'
 ,p_report_columns=>'NAME:PERSONAS:TIME:ESTRELLAS:OBSERVATION:INGREDIENTES:'
+,p_created_on=>wwv_flow_imp.dz('20230911121511Z')
+,p_updated_on=>wwv_flow_imp.dz('20230911121511Z')
+,p_created_by=>'JORTRI'
+,p_updated_by=>'JORTRI'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(12909566637261314)
+,p_plug_name=>'Tipos'
+,p_static_id=>'tipos'
+,p_parent_plug_id=>wwv_flow_imp.id(12258510296434607)
+,p_region_css_classes=>'t-Form--search'
+,p_region_template_options=>'#DEFAULT#'
+,p_escape_on_http_output=>'N'
+,p_plug_template=>4502917002193490937
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'SUB_REGIONS'
+,p_plug_item_display_point=>'ABOVE'
+,p_plug_query_headings_type=>'COLON_DELMITED_LIST'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML')).to_clob
 );
 wwv_flow_imp_page.create_page_button(
  p_id=>wwv_flow_imp.id(12258687378434608)
 ,p_button_sequence=>10
 ,p_button_plug_id=>wwv_flow_imp.id(12258510296434607)
 ,p_button_name=>'GESTION_RECETA'
+,p_static_id=>'gestion-receta'
 ,p_button_action=>'REDIRECT_PAGE'
 ,p_button_template_options=>'#DEFAULT#:t-Button--iconLeft'
-,p_button_template_id=>wwv_flow_imp.id(12567955626418331)
+,p_button_template_id=>2084305881903810008
 ,p_button_is_hot=>'Y'
 ,p_button_image_alt=>'Gestionar'
 ,p_button_position=>'NEXT'
@@ -688,48 +726,31 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_sequence=>10
 ,p_button_plug_id=>wwv_flow_imp.id(12684707128709731)
 ,p_button_name=>'RESET'
+,p_static_id=>'reset'
 ,p_button_static_id=>'reset_button'
-,p_button_action=>'DEFINED_BY_DA'
+,p_button_action=>'DEFINED_BY_DA_ACTION'
 ,p_button_template_options=>'#DEFAULT#:t-Button--iconLeft'
-,p_button_template_id=>wwv_flow_imp.id(12567955626418331)
+,p_button_template_id=>2084305881903810008
 ,p_button_image_alt=>'Limpiar'
 ,p_button_position=>'NEXT'
 ,p_warn_on_unsaved_changes=>null
 ,p_icon_css_classes=>'fa-undo'
+,p_updated_on=>wwv_flow_imp.dz('20261014184025Z')
+,p_updated_by=>'JORTRI'
 );
-wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(12260484275434626)
-,p_name=>'P4_SEARCH'
-,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(12684707128709731)
-,p_prompt=>'Buscar'
-,p_placeholder=>'Buscar recetas'
-,p_display_as=>'NATIVE_TEXT_FIELD'
-,p_cSize=>64
-,p_cMaxlength=>4000
-,p_field_template=>wwv_flow_imp.id(12565064256418327)
-,p_item_icon_css_classes=>'fa-search'
-,p_item_template_options=>'#DEFAULT#'
-,p_encrypt_session_state_yn=>'N'
-,p_attribute_01=>'N'
-,p_attribute_02=>'N'
-,p_attribute_04=>'TEXT'
-,p_attribute_05=>'BOTH'
-);
-wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(12260832916434630)
-,p_name=>'P4_PERSONAS'
-,p_item_sequence=>20
-,p_item_plug_id=>wwv_flow_imp.id(12684707128709731)
-,p_prompt=>'Personas'
-,p_display_as=>'NATIVE_NUMBER_FIELD'
-,p_cSize=>10
-,p_field_template=>wwv_flow_imp.id(12565293941418328)
-,p_item_template_options=>'#DEFAULT#'
-,p_attribute_01=>'1'
-,p_attribute_02=>'10'
-,p_attribute_03=>'left'
-,p_attribute_04=>'numeric'
+wwv_flow_imp_page.create_component_da_action(
+ p_id=>wwv_flow_imp.id(12260374767434625)
+,p_button_id=>wwv_flow_imp.id(12685255784709732)
+,p_action_sequence=>10
+,p_action=>'NATIVE_CLEAR'
+,p_static_id=>'native-clear'
+,p_affected_elements_type=>'ITEM'
+,p_affected_elements=>'P4_SEARCH,P4_PERSONAS,P4_INGREDIENTES_A_LOV,P4_INGREDIENTES_T_LOV,P4_TAGS_A_LOV,P4_TAGS_T_LOV,P4_VALORACION'
+,p_stop_execution_on_error=>true
+,p_created_on=>wwv_flow_imp.dz('20261014184025Z')
+,p_updated_on=>wwv_flow_imp.dz('20261014184025Z')
+,p_created_by=>'JORTRI'
+,p_updated_by=>'JORTRI'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(12909601864261315)
@@ -738,16 +759,17 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_plug_id=>wwv_flow_imp.id(12909566637261314)
 ,p_item_default=>'CARDS'
 ,p_prompt=>'Mostrar como'
+,p_source_type=>'ALWAYS_NULL'
 ,p_display_as=>'NATIVE_RADIOGROUP'
 ,p_named_lov=>'TIPOS_MOSTRAR_RESULTADOS'
-,p_lov=>'.'||wwv_flow_imp.id(12991602203163316)||'.'
-,p_field_template=>wwv_flow_imp.id(12565064256418327)
+,p_field_template=>2042262243893469891
 ,p_item_template_options=>'#DEFAULT#:t-Form-fieldContainer--large:t-Form-fieldContainer--radioButtonGroup'
 ,p_lov_display_extra=>'NO'
 ,p_escape_on_http_output=>'N'
 ,p_encrypt_session_state_yn=>'N'
-,p_attribute_01=>'4'
-,p_attribute_02=>'NONE'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'number_of_columns', '4',
+  'page_action_on_selection', 'NONE')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(12912556184261344)
@@ -755,25 +777,24 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>40
 ,p_item_plug_id=>wwv_flow_imp.id(12684707128709731)
 ,p_prompt=>'Ingredientes (cualquiera)'
+,p_source_type=>'ALWAYS_NULL'
 ,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_named_lov=>'INGREDIENTES'
-,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'SELECT Initcap(name) d, Initcap(name) r',
-'FROM RECIPE_INGREDIENT',
-'GROUP BY Initcap(name)',
-'ORDER BY 1'))
 ,p_cSize=>30
-,p_field_template=>wwv_flow_imp.id(12565293941418328)
+,p_field_template=>3033038003750078790
 ,p_item_template_options=>'#DEFAULT#'
 ,p_lov_display_extra=>'NO'
 ,p_help_text=>'Marca todos los ingredientes y mostrara recetas que tenga alguno de ellos'
-,p_attribute_01=>'POPUP'
-,p_attribute_02=>'FIRST_ROWSET'
-,p_attribute_03=>'Y'
-,p_attribute_04=>'N'
-,p_attribute_05=>'Y'
-,p_attribute_06=>'0'
-,p_attribute_11=>':'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'case_sensitive', 'N',
+  'display_as', 'POPUP',
+  'fetch_on_search', 'Y',
+  'initial_fetch', 'FIRST_ROWSET',
+  'manual_entry', 'N',
+  'match_type', 'CONTAINS',
+  'min_chars', '0')).to_clob
+,p_multi_value_type=>'SEPARATED'
+,p_multi_value_separator=>':'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(12912641801261345)
@@ -781,25 +802,62 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>50
 ,p_item_plug_id=>wwv_flow_imp.id(12684707128709731)
 ,p_prompt=>'Ingredientes (todos)'
+,p_source_type=>'ALWAYS_NULL'
 ,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_named_lov=>'INGREDIENTES'
-,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'SELECT Initcap(name) d, Initcap(name) r',
-'FROM RECIPE_INGREDIENT',
-'GROUP BY Initcap(name)',
-'ORDER BY 1'))
 ,p_cSize=>30
-,p_field_template=>wwv_flow_imp.id(12565293941418328)
+,p_field_template=>3033038003750078790
 ,p_item_template_options=>'#DEFAULT#'
 ,p_lov_display_extra=>'NO'
 ,p_help_text=>'Marca todos los ingredientes y mostrara recetas que tenga todos los marcados'
-,p_attribute_01=>'POPUP'
-,p_attribute_02=>'FIRST_ROWSET'
-,p_attribute_03=>'Y'
-,p_attribute_04=>'N'
-,p_attribute_05=>'Y'
-,p_attribute_06=>'0'
-,p_attribute_11=>':'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'case_sensitive', 'N',
+  'display_as', 'POPUP',
+  'fetch_on_search', 'Y',
+  'initial_fetch', 'FIRST_ROWSET',
+  'manual_entry', 'N',
+  'match_type', 'CONTAINS',
+  'min_chars', '0')).to_clob
+,p_multi_value_type=>'SEPARATED'
+,p_multi_value_separator=>':'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(12260832916434630)
+,p_name=>'P4_PERSONAS'
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_imp.id(12684707128709731)
+,p_prompt=>'Personas'
+,p_source_type=>'ALWAYS_NULL'
+,p_display_as=>'NATIVE_NUMBER_FIELD'
+,p_cSize=>10
+,p_field_template=>3033038003750078790
+,p_item_template_options=>'#DEFAULT#'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'max_value', '10',
+  'min_value', '1',
+  'number_alignment', 'left',
+  'virtual_keyboard', 'numeric')).to_clob
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(12260484275434626)
+,p_name=>'P4_SEARCH'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(12684707128709731)
+,p_prompt=>'Buscar'
+,p_placeholder=>'Buscar recetas'
+,p_source_type=>'ALWAYS_NULL'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>64
+,p_cMaxlength=>4000
+,p_field_template=>2042262243893469891
+,p_item_icon_css_classes=>'fa-search'
+,p_item_template_options=>'#DEFAULT#'
+,p_encrypt_session_state_yn=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'disabled', 'N',
+  'submit_when_enter_pressed', 'N',
+  'subtype', 'TEXT',
+  'trim_spaces', 'BOTH')).to_clob
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(12913000818261349)
@@ -807,38 +865,24 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>60
 ,p_item_plug_id=>wwv_flow_imp.id(12684707128709731)
 ,p_prompt=>'Etiquetas (cualquiera)'
+,p_source_type=>'ALWAYS_NULL'
 ,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_named_lov=>'TAGS'
-,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'select lower(trim(val)) as d, lower(trim(val)) as r',
-'from',
-'  (',
-'  select',
-'    id,',
-'    regexp_substr(tags, ''[^:]+'', 1, rn) val',
-'  from',
-'    RECIPE',
-'    cross join lateral',
-'      (',
-'      select level rn from dual',
-'      connect by level <=',
-'        length ( tags ) - length ( replace ( tags, '':'' ) ) + 1',
-'      )',
-'  where tags is not null',
-'  )  ',
-'group by lower(trim(val));'))
 ,p_cSize=>30
-,p_field_template=>wwv_flow_imp.id(12565293941418328)
+,p_field_template=>3033038003750078790
 ,p_item_template_options=>'#DEFAULT#'
 ,p_lov_display_extra=>'NO'
 ,p_help_text=>'Marca todas las etiquetas y mostrara recetas que tenga alguna de ellas'
-,p_attribute_01=>'POPUP'
-,p_attribute_02=>'FIRST_ROWSET'
-,p_attribute_03=>'Y'
-,p_attribute_04=>'N'
-,p_attribute_05=>'Y'
-,p_attribute_06=>'0'
-,p_attribute_11=>':'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'case_sensitive', 'N',
+  'display_as', 'POPUP',
+  'fetch_on_search', 'Y',
+  'initial_fetch', 'FIRST_ROWSET',
+  'manual_entry', 'N',
+  'match_type', 'CONTAINS',
+  'min_chars', '0')).to_clob
+,p_multi_value_type=>'SEPARATED'
+,p_multi_value_separator=>':'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(12913194102261350)
@@ -846,38 +890,24 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>70
 ,p_item_plug_id=>wwv_flow_imp.id(12684707128709731)
 ,p_prompt=>'Etiquetas (todos)'
+,p_source_type=>'ALWAYS_NULL'
 ,p_display_as=>'NATIVE_POPUP_LOV'
 ,p_named_lov=>'TAGS'
-,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'select lower(trim(val)) as d, lower(trim(val)) as r',
-'from',
-'  (',
-'  select',
-'    id,',
-'    regexp_substr(tags, ''[^:]+'', 1, rn) val',
-'  from',
-'    RECIPE',
-'    cross join lateral',
-'      (',
-'      select level rn from dual',
-'      connect by level <=',
-'        length ( tags ) - length ( replace ( tags, '':'' ) ) + 1',
-'      )',
-'  where tags is not null',
-'  )  ',
-'group by lower(trim(val));'))
 ,p_cSize=>30
-,p_field_template=>wwv_flow_imp.id(12565293941418328)
+,p_field_template=>3033038003750078790
 ,p_item_template_options=>'#DEFAULT#'
 ,p_lov_display_extra=>'NO'
 ,p_help_text=>'Marca todas las etiquetas y mostrara recetas que tenga todas las marcadas'
-,p_attribute_01=>'POPUP'
-,p_attribute_02=>'FIRST_ROWSET'
-,p_attribute_03=>'Y'
-,p_attribute_04=>'N'
-,p_attribute_05=>'Y'
-,p_attribute_06=>'0'
-,p_attribute_11=>':'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'case_sensitive', 'N',
+  'display_as', 'POPUP',
+  'fetch_on_search', 'Y',
+  'initial_fetch', 'FIRST_ROWSET',
+  'manual_entry', 'N',
+  'match_type', 'CONTAINS',
+  'min_chars', '0')).to_clob
+,p_multi_value_type=>'SEPARATED'
+,p_multi_value_separator=>':'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(13108980963766001)
@@ -885,23 +915,26 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>30
 ,p_item_plug_id=>wwv_flow_imp.id(12684707128709731)
 ,p_prompt=>unistr('Valoraci\00F3n (>)')
+,p_source_type=>'ALWAYS_NULL'
 ,p_display_as=>'NATIVE_STAR_RATING'
-,p_field_template=>wwv_flow_imp.id(12565293941418328)
+,p_field_template=>3033038003750078790
 ,p_item_template_options=>'#DEFAULT#'
 ,p_help_text=>'Coge valoraciones mayores de la indicada'
-,p_attribute_01=>'10'
-,p_attribute_02=>'N'
-,p_attribute_03=>'fa-star'
-,p_attribute_04=>'#ffa500'
-,p_attribute_05=>'#808080'
-,p_attribute_06=>'Valor seleccionado #VALUE#'
-,p_attribute_07=>'Y'
-,p_attribute_08=>'N'
-,p_attribute_09=>'STARS'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'active_color', '#ffa500',
+  'icon', 'fa-star',
+  'inactive_color', '#808080',
+  'number_of_stars', '10',
+  'read_only_display', 'STARS',
+  'show_clear_button', 'Y',
+  'show_value', 'N',
+  'tooltip', 'Valor seleccionado #VALUE#',
+  'use_defaults', 'N')).to_clob
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(12260564430434627)
 ,p_name=>'Busqueda Intro'
+,p_static_id=>'busqueda-intro'
 ,p_event_sequence=>20
 ,p_triggering_element_type=>'ITEM'
 ,p_triggering_element=>'P4_SEARCH'
@@ -913,42 +946,26 @@ wwv_flow_imp_page.create_page_da_event(
 ,p_display_when_type=>'NEVER'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(12260658299434628)
-,p_event_id=>wwv_flow_imp.id(12260564430434627)
-,p_event_result=>'TRUE'
-,p_action_sequence=>10
-,p_execute_on_page_init=>'N'
-,p_action=>'NATIVE_REFRESH'
-,p_affected_elements_type=>'REGION'
-,p_affected_region_id=>wwv_flow_imp.id(12683891342709728)
-);
-wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(12260777167434629)
 ,p_event_id=>wwv_flow_imp.id(12260564430434627)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>20
 ,p_execute_on_page_init=>'N'
+,p_static_id=>'native-cancel-event'
 ,p_action=>'NATIVE_CANCEL_EVENT'
 );
-wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(12260208265434624)
-,p_name=>'Limpiar Filtros'
-,p_event_sequence=>40
-,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_imp.id(12685255784709732)
-,p_bind_type=>'bind'
-,p_execution_type=>'IMMEDIATE'
-,p_bind_event_type=>'click'
-);
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(12260374767434625)
-,p_event_id=>wwv_flow_imp.id(12260208265434624)
+ p_id=>wwv_flow_imp.id(12260658299434628)
+,p_event_id=>wwv_flow_imp.id(12260564430434627)
 ,p_event_result=>'TRUE'
 ,p_action_sequence=>10
 ,p_execute_on_page_init=>'N'
-,p_action=>'NATIVE_CLEAR'
-,p_affected_elements_type=>'ITEM'
-,p_affected_elements=>'P4_SEARCH,P4_PERSONAS,P4_INGREDIENTES_A_LOV,P4_INGREDIENTES_T_LOV,P4_TAGS_A_LOV,P4_TAGS_T_LOV,P4_VALORACION'
+,p_static_id=>'native-refresh'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(12683891342709728)
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'maintain_pagination', 'N')).to_clob
 );
 wwv_flow_imp.component_end;
 end;

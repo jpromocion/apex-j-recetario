@@ -4,8 +4,8 @@ begin
 --     MEDIDAS
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2023.04.28'
-,p_release=>'23.1.2'
+ p_version_yyyy_mm_dd=>'2026.03.30'
+,p_release=>'26.1.5'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -14,6 +14,7 @@ wwv_flow_imp.component_begin (
 wwv_flow_imp_shared.create_list_of_values(
  p_id=>wwv_flow_imp.id(12882112713307511)
 ,p_lov_name=>'MEDIDAS'
+,p_static_id=>'medidas'
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'SELECT NAME D, ID R',
 'FROM MEASURE',
@@ -22,6 +23,7 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_location=>'LOCAL'
 ,p_return_column_name=>'R'
 ,p_display_column_name=>'D'
+,p_version_scn=>'1'
 );
 wwv_flow_imp.component_end;
 end;

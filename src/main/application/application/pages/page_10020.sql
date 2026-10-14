@@ -4,8 +4,8 @@ begin
 --     PAGE: 10020
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2023.04.28'
-,p_release=>'23.1.2'
+ p_version_yyyy_mm_dd=>'2026.03.30'
+,p_release=>'26.1.5'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -19,20 +19,25 @@ wwv_flow_imp_page.create_page(
 ,p_warn_on_unsaved_changes=>'N'
 ,p_first_item=>'AUTO_FIRST_ITEM'
 ,p_autocomplete_on_off=>'OFF'
+,p_step_template=>4073832297226169690
 ,p_page_template_options=>'#DEFAULT#'
 ,p_required_patch=>wwv_flow_imp.id(13809536174387321)
 ,p_protection_level=>'C'
 ,p_help_text=>'All application help text can be accessed from this page. The links in the "Documentation" region give a much more in-depth explanation of the application''s features and functionality.'
 ,p_page_component_map=>'11'
+,p_created_on=>wwv_flow_imp.dz('20230911121512Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20230523131446Z')
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230523131446'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(13810264025387324)
 ,p_plug_name=>'Acerca de'
+,p_static_id=>'acerca-de'
 ,p_region_template_options=>'#DEFAULT#:t-ContentBlock--padded:t-ContentBlock--h1:t-ContentBlock--lightBG'
-,p_plug_template=>wwv_flow_imp.id(12482936801418272)
+,p_escape_on_http_output=>'N'
+,p_plug_template=>2323592004483952560
 ,p_plug_display_sequence=>20
+,p_plug_item_display_point=>'ABOVE'
 ,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
 unistr('<h1>Jose Javier G\00E1lvez G\00F3mez</h1>'),
 '<h2>jpromocion</h2>',
@@ -96,10 +101,12 @@ unistr('    Informaci\00F3n de contacto'),
 '        </div>',
 '    </section>',
 '</div>'))
+,p_plug_query_headings_type=>'COLON_DELMITED_LIST'
 ,p_plug_query_num_rows=>15
-,p_attribute_01=>'N'
-,p_attribute_02=>'HTML'
-,p_attribute_03=>'Y'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML',
+  'show_line_breaks', 'Y')).to_clob
 );
 wwv_flow_imp.component_end;
 end;

@@ -4,8 +4,8 @@ begin
 --     PAGE: 10010
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2023.04.28'
-,p_release=>'23.1.2'
+ p_version_yyyy_mm_dd=>'2026.03.30'
+,p_release=>'26.1.5'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -19,6 +19,7 @@ wwv_flow_imp_page.create_page(
 ,p_step_title=>'Configure Access Control'
 ,p_autocomplete_on_off=>'OFF'
 ,p_group_id=>wwv_flow_imp.id(12597809446418384)
+,p_step_template=>2101883943284197310
 ,p_page_template_options=>'#DEFAULT#'
 ,p_required_role=>wwv_flow_imp.id(12596571602418379)
 ,p_required_patch=>wwv_flow_imp.id(12594867275418377)
@@ -38,44 +39,54 @@ wwv_flow_imp_page.create_page(
 '</ul>',
 '</em></p>'))
 ,p_page_component_map=>'16'
+,p_created_on=>wwv_flow_imp.dz('20230911121512Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20261014184025Z')
 ,p_last_updated_by=>'JORTRI'
-,p_last_upd_yyyymmddhh24miss=>'20230516112116'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12606485074418425)
 ,p_plug_name=>'Access Control Configuration'
+,p_static_id=>'access-control-configuration'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_escape_on_http_output=>'Y'
-,p_plug_template=>wwv_flow_imp.id(12428902632418246)
+,p_plug_template=>4502917002193490937
 ,p_plug_display_sequence=>10
+,p_plug_item_display_point=>'ABOVE'
 ,p_query_type=>'SQL'
+,p_plug_query_headings_type=>'COLON_DELMITED_LIST'
 ,p_plug_query_num_rows=>15
-,p_attribute_01=>'N'
-,p_attribute_02=>'HTML'
-,p_attribute_03=>'Y'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML',
+  'show_line_breaks', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12606588273418425)
 ,p_plug_name=>'Buttons'
+,p_static_id=>'buttons'
 ,p_region_template_options=>'#DEFAULT#'
 ,p_escape_on_http_output=>'Y'
-,p_plug_template=>wwv_flow_imp.id(12478892201418270)
+,p_plug_template=>2127905476394690047
 ,p_plug_display_sequence=>10
 ,p_plug_display_point=>'REGION_POSITION_03'
+,p_plug_item_display_point=>'ABOVE'
 ,p_query_type=>'SQL'
+,p_plug_query_headings_type=>'COLON_DELMITED_LIST'
 ,p_plug_query_num_rows=>15
-,p_attribute_01=>'N'
-,p_attribute_02=>'HTML'
-,p_attribute_03=>'Y'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'HTML',
+  'show_line_breaks', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_button(
  p_id=>wwv_flow_imp.id(12607773988418427)
 ,p_button_sequence=>20
 ,p_button_plug_id=>wwv_flow_imp.id(12606588273418425)
 ,p_button_name=>'APPLY_CHANGES'
+,p_static_id=>'apply-changes'
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#'
-,p_button_template_id=>wwv_flow_imp.id(12567825914418331)
+,p_button_template_id=>4073839297780169708
 ,p_button_is_hot=>'Y'
 ,p_button_image_alt=>'Apply Changes'
 ,p_button_position=>'CREATE'
@@ -85,12 +96,27 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_sequence=>10
 ,p_button_plug_id=>wwv_flow_imp.id(12606588273418425)
 ,p_button_name=>'CANCEL'
-,p_button_action=>'DEFINED_BY_DA'
+,p_static_id=>'cancel'
+,p_button_action=>'DEFINED_BY_DA_ACTION'
 ,p_button_template_options=>'#DEFAULT#'
-,p_button_template_id=>wwv_flow_imp.id(12567825914418331)
+,p_button_template_id=>4073839297780169708
 ,p_button_image_alt=>'Cancel'
 ,p_button_position=>'PREVIOUS'
 ,p_button_execute_validations=>'N'
+,p_updated_on=>wwv_flow_imp.dz('20261014184025Z')
+,p_updated_by=>'JORTRI'
+);
+wwv_flow_imp_page.create_component_da_action(
+ p_id=>wwv_flow_imp.id(12608865723418428)
+,p_button_id=>wwv_flow_imp.id(12608076565418427)
+,p_action_sequence=>10
+,p_action=>'NATIVE_DIALOG_CANCEL'
+,p_static_id=>'native-dialog-cancel'
+,p_stop_execution_on_error=>true
+,p_created_on=>wwv_flow_imp.dz('20261014184025Z')
+,p_updated_on=>wwv_flow_imp.dz('20261014184025Z')
+,p_created_by=>'JORTRI'
+,p_updated_by=>'JORTRI'
 );
 wwv_flow_imp_page.create_page_branch(
  p_id=>wwv_flow_imp.id(12609412565418429)
@@ -120,29 +146,12 @@ wwv_flow_imp_page.create_page_item(
 ,p_cMaxlength=>4000
 ,p_cHeight=>4
 ,p_grid_label_column_span=>3
-,p_field_template=>wwv_flow_imp.id(12565153955418328)
+,p_field_template=>2320077351817916916
 ,p_item_template_options=>'#DEFAULT#'
 ,p_lov_display_extra=>'NO'
 ,p_inline_help_text=>'Choose <strong>No</strong> if all users are defined in the access control list. Choose <strong>Yes</strong> if authenticated users not in the access control list may also use this application.'
-,p_attribute_01=>'Y'
-);
-wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(12608179452418427)
-,p_name=>'Cancel Dialog'
-,p_event_sequence=>10
-,p_triggering_element_type=>'BUTTON'
-,p_triggering_button_id=>wwv_flow_imp.id(12608076565418427)
-,p_bind_type=>'bind'
-,p_execution_type=>'IMMEDIATE'
-,p_bind_event_type=>'click'
-);
-wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(12608865723418428)
-,p_event_id=>wwv_flow_imp.id(12608179452418427)
-,p_event_result=>'TRUE'
-,p_action_sequence=>10
-,p_execute_on_page_init=>'N'
-,p_action=>'NATIVE_DIALOG_CANCEL'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'use_defaults', 'Y')).to_clob
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(12610159451418431)
@@ -150,6 +159,7 @@ wwv_flow_imp_page.create_page_process(
 ,p_process_point=>'AFTER_SUBMIT'
 ,p_process_type=>'NATIVE_PLSQL'
 ,p_process_name=>'Set Access Control'
+,p_static_id=>'set-access-control'
 ,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'begin',
 '    if :P10010_ALLOW_OTHER_USERS = ''Y'' then',

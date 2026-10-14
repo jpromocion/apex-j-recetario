@@ -4,8 +4,8 @@ begin
 --     LIST: Navigation Menu
 --   Manifest End
 wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2023.04.28'
-,p_release=>'23.1.2'
+ p_version_yyyy_mm_dd=>'2026.03.30'
+,p_release=>'26.1.5'
 ,p_default_workspace_id=>7231611737995830
 ,p_default_application_id=>125
 ,p_default_id_offset=>0
@@ -14,51 +14,24 @@ wwv_flow_imp.component_begin (
 wwv_flow_imp_shared.create_list(
  p_id=>wwv_flow_imp.id(12392762446418212)
 ,p_name=>'Navigation Menu'
-,p_list_status=>'PUBLIC'
+,p_static_id=>'navigation-menu'
+,p_version_scn=>'1'
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(12683426336709727)
-,p_list_item_display_sequence=>20
-,p_list_item_link_text=>'Recetario'
-,p_list_item_link_target=>'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
-,p_list_item_icon=>'fa-table-search'
-,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
-,p_list_item_current_for_pages=>'4'
-);
-wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(12657360483536654)
-,p_list_item_display_sequence=>80
-,p_list_item_link_text=>'Mantenimientos Generales'
-,p_list_item_icon=>'fa-folder'
+ p_id=>wwv_flow_imp.id(12642518993419175)
+,p_list_item_display_sequence=>10000
+,p_list_item_link_text=>'Administration'
+,p_static_id=>'administration'
+,p_list_item_link_target=>'f?p=&APP_ID.:10000:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-user-wrench'
 ,p_security_scheme=>wwv_flow_imp.id(12596571602418379)
 ,p_list_item_current_type=>'TARGET_PAGE'
-);
-wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(12668880782574411)
-,p_list_item_display_sequence=>90
-,p_list_item_link_text=>'Medidas'
-,p_list_item_link_target=>'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
-,p_list_item_icon=>'fa-clipboard'
-,p_parent_list_item_id=>wwv_flow_imp.id(12657360483536654)
-,p_security_scheme=>wwv_flow_imp.id(12596571602418379)
-,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
-,p_list_item_current_for_pages=>'2,3'
-);
-wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(10544035310773089)
-,p_list_item_display_sequence=>110
-,p_list_item_link_text=>'Convertidores'
-,p_list_item_link_target=>'f?p=&APP_ID.:13:&SESSION.::&DEBUG.::::'
-,p_list_item_icon=>'fa-clipboard'
-,p_parent_list_item_id=>wwv_flow_imp.id(12657360483536654)
-,p_security_scheme=>wwv_flow_imp.id(12596571602418379)
-,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
-,p_list_item_current_for_pages=>'13,14'
 );
 wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(13706764043576985)
 ,p_list_item_display_sequence=>100
 ,p_list_item_link_text=>'Ayuda imagenes'
+,p_static_id=>'ayuda-imagenes'
 ,p_list_item_link_target=>'f?p=&APP_ID.:11:&APP_SESSION.::&DEBUG.:::'
 ,p_list_item_icon=>'fa-info-circle-o'
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
@@ -68,19 +41,54 @@ wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(10561908362925499)
 ,p_list_item_display_sequence=>120
 ,p_list_item_link_text=>'Calculadora'
+,p_static_id=>'calculadora'
 ,p_list_item_link_target=>'f?p=&APP_ID.:15:&APP_SESSION.::&DEBUG.:::'
 ,p_list_item_icon=>'fa-calculator'
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
 ,p_list_item_current_for_pages=>'15'
 );
 wwv_flow_imp_shared.create_list_item(
- p_id=>wwv_flow_imp.id(12642518993419175)
-,p_list_item_display_sequence=>10000
-,p_list_item_link_text=>'Administration'
-,p_list_item_link_target=>'f?p=&APP_ID.:10000:&APP_SESSION.::&DEBUG.:::'
-,p_list_item_icon=>'fa-user-wrench'
+ p_id=>wwv_flow_imp.id(10544035310773089)
+,p_list_item_display_sequence=>110
+,p_list_item_link_text=>'Convertidores'
+,p_static_id=>'convertidores'
+,p_list_item_link_target=>'f?p=&APP_ID.:13:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-clipboard'
+,p_parent_list_item_id=>wwv_flow_imp.id(12657360483536654)
+,p_security_scheme=>wwv_flow_imp.id(12596571602418379)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'13,14'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(12657360483536654)
+,p_list_item_display_sequence=>80
+,p_list_item_link_text=>'Mantenimientos Generales'
+,p_static_id=>'mantenimientos-generales'
+,p_list_item_icon=>'fa-folder'
 ,p_security_scheme=>wwv_flow_imp.id(12596571602418379)
 ,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(12668880782574411)
+,p_list_item_display_sequence=>90
+,p_list_item_link_text=>'Medidas'
+,p_static_id=>'medidas'
+,p_list_item_link_target=>'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-clipboard'
+,p_parent_list_item_id=>wwv_flow_imp.id(12657360483536654)
+,p_security_scheme=>wwv_flow_imp.id(12596571602418379)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'2,3'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(12683426336709727)
+,p_list_item_display_sequence=>20
+,p_list_item_link_text=>'Recetario'
+,p_static_id=>'recetario'
+,p_list_item_link_target=>'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-table-search'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'4'
 );
 wwv_flow_imp.component_end;
 end;
